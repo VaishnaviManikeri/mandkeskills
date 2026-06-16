@@ -1,0 +1,177 @@
+
+.exim-page {
+  overflow-x: hidden;
+  background: #fff;
+}
+
+/* HERO */
+
+.exim-hero {
+  min-height: 90vh;
+  background: linear-gradient(
+    135deg,
+    #020617,
+    #172554,
+    #1e293b
+  );
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.exim-hero-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.course-badge {
+  background: rgba(249,115,22,.15);
+  border: 1px solid rgba(249,115,22,.3);
+  color: #fb923c;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.hero-left h1 {
+  font-size: 4rem;
+  margin-top: 25px;
+  color: white;
+  line-height: 1.1;
+}
+
+.hero-left h1 span {
+  display: block;
+  color: #f97316;
+}
+
+.hero-left p {
+  margin-top: 25px;
+  color: #cbd5e1;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.hero-tags span {
+  background: rgba(255,255,255,.08);
+  padding: 10px 18px;
+  border-radius: 30px;
+  color: white;
+}
+
+.glass-card {
+  background: rgba(255,255,255,.08);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,.1);
+  padding: 50px;
+  border-radius: 30px;
+  text-align: center;
+  color: white;
+}
+
+.glass-card svg {
+  color: #f97316;
+}
+
+.about-course,
+.quick-info,
+.learning-section,
+.skills-section,
+.career-section {
+  padding: 120px 0;
+}
+
+.info-grid,
+.learning-grid,
+.skills-grid,
+.career-grid {
+  display: grid;
+  gap: 25px;
+  margin-top: 60px;
+}
+
+.info-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.learning-grid,
+.skills-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.career-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.info-card,
+.learning-card,
+.skill-card,
+.career-card {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 15px 40px rgba(0,0,0,.06);
+  transition: .4s;
+}
+
+.info-card:hover,
+.learning-card:hover,
+.skill-card:hover,
+.career-card:hover {
+  transform: translateY(-8px);
+}
+
+.learning-card,
+.skill-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.learning-card svg,
+.skill-card svg,
+.info-card svg {
+  color: #f97316;
+}
+
+.career-section {
+  background: #f8fafc;
+}
+
+@media(max-width:1024px){
+  .exim-hero-content,
+  .info-grid,
+  .learning-grid,
+  .skills-grid,
+  .career-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .hero-left h1{
+    font-size:3rem;
+  }
+}
+
+@media(max-width:768px){
+  .exim-hero-content,
+  .info-grid,
+  .learning-grid,
+  .skills-grid,
+  .career-grid{
+    grid-template-columns:1fr;
+  }
+
+  .hero-left h1{
+    font-size:2.4rem;
+  }
+}
+
