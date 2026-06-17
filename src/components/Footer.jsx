@@ -24,24 +24,13 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Training */}
-          <div className="footer-column">
-            <h4 className="footer-subtitle">TRAINING</h4>
-            <ul className="footer-links">
-              <li><a href="/courses/ai-data-science">AI & Data Science</a></li>
-              <li><a href="/courses/tally">Tally Prime</a></li>
-              <li><a href="/courses/ethical-hacking">Cyber Security</a></li>
-              <li><a href="/courses/exim">EXIM Trade</a></li>
-              <li><a href="/courses/personality">Digital Skills</a></li>
-            </ul>
-          </div>
-
           {/* Quick Links */}
           <div className="footer-column">
             <h4 className="footer-subtitle">QUICK LINKS</h4>
             <ul className="footer-links">
-              <li><a href="/">Courses</a></li>
+              <li><a href="/courses">Courses</a></li>
               <li><a href="/contact">Contact</a></li>
+              <li><a href="/about">About MILES</a></li>
             </ul>
           </div>
 
@@ -110,7 +99,7 @@ const Footer = () => {
 
         .footer-grid {
           display: grid;
-          grid-template-columns: 2fr 1fr 1fr 1.5fr;
+          grid-template-columns: 2fr 1fr 1.5fr;
           gap: 40px;
           padding-bottom: 40px;
           border-bottom: 1px solid #e8f0fe;

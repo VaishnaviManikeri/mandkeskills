@@ -99,7 +99,7 @@ const PersonalityPage = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Transform Your Personality with List */}
       <section className="about-section">
         <div className="container">
           <div className="section-header">
@@ -111,46 +111,87 @@ const PersonalityPage = () => {
               and this is how you nail them.
             </p>
           </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>For Who</h3>
-              <p>Graduate students and freshers preparing to enter the corporate world</p>
+          
+          {/* Course Details as List */}
+          <div className="course-details-list">
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>For Who</h3>
+                <p>Graduate students and freshers preparing to enter the corporate world</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <BookOpen size={28} className="feature-icon" />
-              <h3>Pre-Req</h3>
-              <p>None</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <BookOpen size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Pre-Req</h3>
+                <p>None</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Clock size={28} className="feature-icon" />
-              <h3>Duration</h3>
-              <p>4 Weeks</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Clock size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Duration</h3>
+                <p>4 Weeks</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Calendar size={28} className="feature-icon" />
-              <h3>Schedule</h3>
-              <p>Weekend-only batches</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Calendar size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Schedule</h3>
+                <p>Weekend-only batches</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Monitor size={28} className="feature-icon" />
-              <h3>Session</h3>
-              <p>2 hours</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Monitor size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Session</h3>
+                <p>2 hours</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Building2 size={28} className="feature-icon" />
-              <h3>Mode</h3>
-              <p>Offline / Classroom</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Building2 size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Mode</h3>
+                <p>Offline / Classroom</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>Batch Size</h3>
-              <p>10 – 15 students</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Batch Size</h3>
+                <p>10 – 15 students</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Award size={28} className="feature-icon" />
-              <h3>Certificate</h3>
-              <p>Certificate of Completion from MILES</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Award size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Certificate</h3>
+                <p>Certificate of Completion from MILES</p>
+              </div>
             </div>
           </div>
         </div>
@@ -353,9 +394,6 @@ const PersonalityPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      
-
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
@@ -517,6 +555,7 @@ const PersonalityPage = () => {
 
         .primary-btn:hover {
           transform: translateY(-5px);
+          box-shadow: 0 20px 45px rgba(26, 86, 219, 0.45);
         }
 
         .secondary-btn {
@@ -536,6 +575,7 @@ const PersonalityPage = () => {
 
         .secondary-btn:hover {
           background: rgba(255,255,255,0.15);
+          transform: translateY(-5px);
         }
 
         .fade-up {
@@ -573,6 +613,7 @@ const PersonalityPage = () => {
 
         .stat-card:hover {
           transform: translateY(-10px);
+          box-shadow: 0 25px 60px rgba(0,0,0,0.12);
         }
 
         .stat-card svg {
@@ -618,50 +659,70 @@ const PersonalityPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* ABOUT */
+        /* ABOUT - LIST STYLES */
         .about-section {
           padding: 80px 0 120px;
-        }
-
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 24px;
-          margin-top: 70px;
-        }
-
-        .feature-card {
-          padding: 28px 24px;
-          border-radius: 20px;
           background: #ffffff;
+        }
+
+        .course-details-list {
+          max-width: 900px;
+          margin: 60px auto 0;
+          background: #f8fafc;
+          border-radius: 24px;
+          padding: 40px;
           border: 1px solid #e2e8f0;
-          transition: 0.4s;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          font-family: "Poppins", sans-serif;
         }
 
-        .feature-card:hover {
-          transform: translateY(-10px);
-          border-color: #1a56db;
+        .detail-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          padding: 18px 0;
+          border-bottom: 1px solid #e2e8f0;
+          transition: all 0.3s;
         }
 
-        .feature-icon {
+        .detail-item:last-child {
+          border-bottom: none;
+        }
+
+        .detail-item:hover {
+          padding-left: 8px;
+        }
+
+        .detail-icon {
+          flex-shrink: 0;
+          width: 48px;
+          height: 48px;
+          background: #ffffff;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           color: #1a56db;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .feature-card h3 {
-          margin: 15px 0 10px;
-          color: #1a2332;
-          font-size: 16px;
+        .detail-content {
+          flex: 1;
+        }
+
+        .detail-content h3 {
           font-family: "Times New Roman", "Poppins", serif;
+          font-size: 1.1rem;
           font-weight: 700;
+          color: #1a2332;
+          margin-bottom: 4px;
         }
 
-        .feature-card p {
-          color: #1a2332;
-          font-size: 14px;
-          line-height: 1.6;
+        .detail-content p {
           font-family: "Poppins", sans-serif;
+          font-size: 0.95rem;
+          color: #1a2332;
+          line-height: 1.6;
+          margin: 0;
         }
 
         /* COURSES */
@@ -684,10 +745,13 @@ const PersonalityPage = () => {
           transition: 0.4s;
           box-shadow: 0 15px 40px rgba(0,0,0,0.06);
           font-family: "Poppins", sans-serif;
+          border: 1px solid #e2e8f0;
         }
 
         .course-card:hover {
           transform: translateY(-12px);
+          box-shadow: 0 25px 60px rgba(0,0,0,0.1);
+          border-color: #1a56db;
         }
 
         .course-card svg {
@@ -719,6 +783,12 @@ const PersonalityPage = () => {
           gap: 8px;
           cursor: pointer;
           font-family: "Poppins", sans-serif;
+          transition: all 0.3s;
+        }
+
+        .course-card button:hover {
+          color: #1e40af;
+          gap: 12px;
         }
 
         /* FOCUS AREAS */
@@ -893,6 +963,12 @@ const PersonalityPage = () => {
           font-weight: 500;
           font-family: "Poppins", sans-serif;
           color: #ffffff;
+          transition: all 0.3s;
+        }
+
+        .hire-card:hover {
+          background: rgba(255,255,255,0.15);
+          transform: translateY(-5px);
         }
 
         .hire-card svg {
@@ -924,6 +1000,7 @@ const PersonalityPage = () => {
         .benefit-card:hover {
           transform: translateY(-10px);
           border-color: #1a56db;
+          box-shadow: 0 20px 40px rgba(26, 86, 219, 0.1);
         }
 
         .benefit-icon-wrapper {
@@ -932,6 +1009,7 @@ const PersonalityPage = () => {
           background: #ffffff;
           border-radius: 16px;
           margin-bottom: 20px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .benefit-icon {
@@ -1007,6 +1085,7 @@ const PersonalityPage = () => {
 
         .cta-primary:hover {
           transform: translateY(-5px);
+          box-shadow: 0 20px 45px rgba(26, 86, 219, 0.4);
         }
 
         .cta-secondary {
@@ -1026,6 +1105,7 @@ const PersonalityPage = () => {
 
         .cta-secondary:hover {
           background: rgba(255,255,255,0.2);
+          transform: translateY(-5px);
         }
 
         .cta-tertiary {
@@ -1045,6 +1125,7 @@ const PersonalityPage = () => {
 
         .cta-tertiary:hover {
           background: rgba(255,255,255,0.15);
+          transform: translateY(-5px);
         }
 
         .cta-note {
@@ -1080,10 +1161,6 @@ const PersonalityPage = () => {
             padding: 30px;
           }
 
-          .features-grid {
-            grid-template-columns: repeat(2, 1fr);
-          }
-
           .courses-grid {
             grid-template-columns: 1fr 1fr;
           }
@@ -1102,6 +1179,10 @@ const PersonalityPage = () => {
 
           .hires-grid {
             grid-template-columns: 1fr 1fr;
+          }
+
+          .course-details-list {
+            padding: 30px 24px;
           }
         }
 
@@ -1140,11 +1221,6 @@ const PersonalityPage = () => {
             gap: 15px;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-          }
-
           .courses-grid {
             grid-template-columns: 1fr;
           }
@@ -1177,8 +1253,36 @@ const PersonalityPage = () => {
             font-size: 1.5rem;
           }
 
-          .feature-card {
-            padding: 20px;
+          .about-section {
+            padding: 60px 0 80px;
+          }
+
+          .course-details-list {
+            padding: 24px 16px;
+            margin-top: 40px;
+          }
+
+          .detail-item {
+            padding: 14px 0;
+            gap: 16px;
+          }
+
+          .detail-icon {
+            width: 40px;
+            height: 40px;
+          }
+
+          .detail-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          .detail-content h3 {
+            font-size: 1rem;
+          }
+
+          .detail-content p {
+            font-size: 0.85rem;
           }
 
           .cta-buttons {
@@ -1196,10 +1300,6 @@ const PersonalityPage = () => {
 
         @media (max-width: 480px) {
           .stats-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .features-grid {
             grid-template-columns: 1fr;
           }
 
@@ -1227,6 +1327,63 @@ const PersonalityPage = () => {
 
           .hero-content {
             padding: 20px;
+          }
+
+          .course-details-list {
+            padding: 18px 12px;
+          }
+
+          .detail-item {
+            padding: 12px 0;
+            gap: 12px;
+          }
+
+          .detail-icon {
+            width: 36px;
+            height: 36px;
+          }
+
+          .detail-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          .detail-content h3 {
+            font-size: 0.95rem;
+          }
+
+          .detail-content p {
+            font-size: 0.8rem;
+          }
+
+          .section-header h2 {
+            font-size: 1.8rem;
+          }
+
+          .cta-section h2 {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .hero-title {
+            font-size: 1.6rem;
+          }
+
+          .hero-title span {
+            font-size: 1.6rem;
+          }
+
+          .stats-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .section-header h2 {
+            font-size: 1.5rem;
+          }
+
+          .cta-section h2 {
+            font-size: 1.6rem;
           }
         }
       `}</style>

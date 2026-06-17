@@ -34,7 +34,6 @@ const HackingPage = () => {
         <div className="hero-background">
           <img src="/assets/images/hacking.png" alt="Ethical Hacking Background" />
         </div>
-        <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content fade-up">
@@ -100,7 +99,7 @@ const HackingPage = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Start Your Cybersecurity Career with List */}
       <section className="about-section">
         <div className="container">
           <div className="section-header">
@@ -112,46 +111,87 @@ const HackingPage = () => {
               No prior IT background required — just curiosity and commitment.
             </p>
           </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>For Who</h3>
-              <p>IT and non-IT students, final year students, career switchers</p>
+          
+          {/* Course Details as List */}
+          <div className="course-details-list">
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>For Who</h3>
+                <p>IT and non-IT students, final year students, career switchers</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <BookOpen size={28} className="feature-icon" />
-              <h3>Pre-Req</h3>
-              <p>Basic computer knowledge</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <BookOpen size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Pre-Req</h3>
+                <p>Basic computer knowledge</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Clock size={28} className="feature-icon" />
-              <h3>Duration</h3>
-              <p>3 – 4 Months</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Clock size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Duration</h3>
+                <p>3 – 4 Months</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Calendar size={28} className="feature-icon" />
-              <h3>Schedule</h3>
-              <p>3 sessions per week</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Calendar size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Schedule</h3>
+                <p>3 sessions per week</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Monitor size={28} className="feature-icon" />
-              <h3>Session</h3>
-              <p>2 hours</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Monitor size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Session</h3>
+                <p>2 hours</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Building2 size={28} className="feature-icon" />
-              <h3>Mode</h3>
-              <p>Offline / Classroom</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Building2 size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Mode</h3>
+                <p>Offline / Classroom</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>Batch Size</h3>
-              <p>Max 20 students</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Batch Size</h3>
+                <p>Max 20 students</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Award size={28} className="feature-icon" />
-              <h3>Certificate</h3>
-              <p>Certificate of Completion from MILES</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Award size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Certificate</h3>
+                <p>Certificate of Completion from MILES</p>
+              </div>
             </div>
           </div>
         </div>
@@ -395,7 +435,6 @@ const HackingPage = () => {
         </div>
       </section>
 
-      
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
@@ -440,11 +479,9 @@ const HackingPage = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-        //   opacity: 0.3;
         }
 
-        
-
+      
         .hero-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -519,9 +556,9 @@ const HackingPage = () => {
           gap: 8px;
           padding: 10px 22px;
           border-radius: 50px;
-          background: #000000;
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          color: #ffffff;
+          background: #FFFFFF;
+          border: 1px solid #a78bfa;
+          color: #000000;
           font-weight: 500;
           font-size: 0.9rem;
           backdrop-filter: blur(10px);
@@ -678,52 +715,70 @@ const HackingPage = () => {
           font-size: 1rem;
         }
 
-        /* ABOUT */
+        /* ABOUT - LIST STYLES */
         .about-section {
           padding: 80px 0 120px;
           background: #ffffff;
         }
 
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 24px;
-          margin-top: 70px;
-        }
-
-        .feature-card {
-          padding: 28px 24px;
-          border-radius: 20px;
-          background: #ffffff;
+        .course-details-list {
+          max-width: 900px;
+          margin: 60px auto 0;
+          background: #f8fafc;
+          border-radius: 24px;
+          padding: 40px;
           border: 1px solid #e2e8f0;
-          transition: all 0.4s;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          font-family: "Poppins", sans-serif;
         }
 
-        .feature-card:hover {
-          transform: translateY(-10px);
-          border-color: #8b5cf6;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        .detail-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          padding: 18px 0;
+          border-bottom: 1px solid #e2e8f0;
+          transition: all 0.3s;
         }
 
-        .feature-icon {
+        .detail-item:last-child {
+          border-bottom: none;
+        }
+
+        .detail-item:hover {
+          padding-left: 8px;
+        }
+
+        .detail-icon {
+          flex-shrink: 0;
+          width: 48px;
+          height: 48px;
+          background: #ffffff;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           color: #8b5cf6;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .feature-card h3 {
-          margin: 15px 0 10px;
-          color: #0f172a;
-          font-size: 1.1rem;
+        .detail-content {
+          flex: 1;
+        }
+
+        .detail-content h3 {
           font-family: "Times New Roman", Times, serif;
+          font-size: 1.1rem;
           font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 4px;
         }
 
-        .feature-card p {
-          color: #475569;
-          font-size: 0.9rem;
-          line-height: 1.6;
+        .detail-content p {
           font-family: "Poppins", sans-serif;
+          font-size: 0.95rem;
+          color: #475569;
+          line-height: 1.6;
+          margin: 0;
         }
 
         /* COURSES */
@@ -1192,8 +1247,6 @@ const HackingPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* FOOTER */
-        
         /* ========== RESPONSIVE DESIGN ========== */
 
         /* Tablets & Small Laptops */
@@ -1206,11 +1259,6 @@ const HackingPage = () => {
 
           .hero-title {
             font-size: 3rem;
-          }
-
-          .features-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
           }
 
           .courses-grid {
@@ -1247,6 +1295,10 @@ const HackingPage = () => {
 
           .cta-section h2 {
             font-size: 3rem;
+          }
+
+          .course-details-list {
+            padding: 30px 24px;
           }
         }
 
@@ -1343,21 +1395,31 @@ const HackingPage = () => {
             font-size: 0.95rem;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+          .course-details-list {
+            padding: 24px 16px;
             margin-top: 40px;
           }
 
-          .feature-card {
-            padding: 20px;
+          .detail-item {
+            padding: 14px 0;
+            gap: 16px;
           }
 
-          .feature-card h3 {
+          .detail-icon {
+            width: 40px;
+            height: 40px;
+          }
+
+          .detail-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          .detail-content h3 {
             font-size: 1rem;
           }
 
-          .feature-card p {
+          .detail-content p {
             font-size: 0.85rem;
           }
 
@@ -1494,11 +1556,6 @@ const HackingPage = () => {
             justify-content: center;
             padding: 14px 25px;
           }
-
-          .footer {
-            padding: 20px 0;
-            font-size: 0.85rem;
-          }
         }
 
         /* Mobile Phones */
@@ -1587,13 +1644,31 @@ const HackingPage = () => {
             font-size: 0.9rem;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr;
+          .course-details-list {
+            padding: 18px 12px;
+          }
+
+          .detail-item {
+            padding: 12px 0;
             gap: 12px;
           }
 
-          .feature-card {
-            padding: 18px 16px;
+          .detail-icon {
+            width: 36px;
+            height: 36px;
+          }
+
+          .detail-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          .detail-content h3 {
+            font-size: 0.95rem;
+          }
+
+          .detail-content p {
+            font-size: 0.8rem;
           }
 
           .courses-grid {
@@ -1677,11 +1752,6 @@ const HackingPage = () => {
           .cta-note {
             font-size: 0.85rem;
           }
-
-          .footer {
-            font-size: 0.75rem;
-            padding: 15px 0;
-          }
         }
 
         /* Very Small Devices */
@@ -1696,22 +1766,6 @@ const HackingPage = () => {
 
           .stats-grid {
             grid-template-columns: 1fr;
-          }
-
-          .feature-card {
-            padding: 15px;
-          }
-
-          .feature-card h3 {
-            font-size: 0.95rem;
-          }
-
-          .feature-card p {
-            font-size: 0.8rem;
-          }
-
-          .course-card h3 {
-            font-size: 0.95rem;
           }
 
           .section-header h2 {

@@ -103,7 +103,7 @@ const GenAIPage = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Build AI Apps Without Code with List */}
       <section className="about-section">
         <div className="container">
           <div className="section-header">
@@ -115,46 +115,87 @@ const GenAIPage = () => {
               deploying AI projects. No coding needed. Just creativity and curiosity.
             </p>
           </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>For Who</h3>
-              <p>Students, freshers, and professionals wanting to work with AI without coding</p>
+          
+          {/* Course Details as List */}
+          <div className="course-details-list">
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>For Who</h3>
+                <p>Students, freshers, and professionals wanting to work with AI without coding</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <BookOpen size={28} className="feature-icon" />
-              <h3>Pre-Req</h3>
-              <p>None — just curiosity!</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <BookOpen size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Pre-Req</h3>
+                <p>None — just curiosity!</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Clock size={28} className="feature-icon" />
-              <h3>Duration</h3>
-              <p>3 Months</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Clock size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Duration</h3>
+                <p>3 Months</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Calendar size={28} className="feature-icon" />
-              <h3>Schedule</h3>
-              <p>2 – 3 sessions per week</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Calendar size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Schedule</h3>
+                <p>2 – 3 sessions per week</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Monitor size={28} className="feature-icon" />
-              <h3>Session</h3>
-              <p>2 – 3 hours</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Monitor size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Session</h3>
+                <p>2 – 3 hours</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Building2 size={28} className="feature-icon" />
-              <h3>Mode</h3>
-              <p>Offline / Classroom</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Building2 size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Mode</h3>
+                <p>Offline / Classroom</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>Batch Size</h3>
-              <p>As per cohort</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Batch Size</h3>
+                <p>As per cohort</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Award size={28} className="feature-icon" />
-              <h3>Certificate</h3>
-              <p>Certificate of Completion from MILES</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Award size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Certificate</h3>
+                <p>Certificate of Completion from MILES</p>
+              </div>
             </div>
           </div>
         </div>
@@ -378,8 +419,6 @@ const GenAIPage = () => {
         </div>
       </section>
 
-      
-
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
@@ -424,21 +463,6 @@ const GenAIPage = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          opacity: 0.3;
-        }
-
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            135deg,
-            rgba(2, 6, 23, 0.95) 0%,
-            rgba(15, 23, 42, 0.85) 30%,
-            rgba(88, 28, 135, 0.75) 60%,
-            rgba(139, 92, 246, 0.6) 85%,
-            rgba(139, 92, 246, 0.3) 100%
-          );
-          z-index: 1;
         }
 
         .hero-grid {
@@ -670,52 +694,70 @@ const GenAIPage = () => {
           font-size: 1rem;
         }
 
-        /* ABOUT */
+        /* ABOUT - LIST STYLES */
         .about-section {
           padding: 80px 0 120px;
           background: #ffffff;
         }
 
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 24px;
-          margin-top: 70px;
-        }
-
-        .feature-card {
-          padding: 28px 24px;
-          border-radius: 20px;
-          background: #ffffff;
+        .course-details-list {
+          max-width: 900px;
+          margin: 60px auto 0;
+          background: #f8fafc;
+          border-radius: 24px;
+          padding: 40px;
           border: 1px solid #e2e8f0;
-          transition: all 0.4s;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          font-family: "Poppins", sans-serif;
         }
 
-        .feature-card:hover {
-          transform: translateY(-10px);
-          border-color: #8b5cf6;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        .detail-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          padding: 18px 0;
+          border-bottom: 1px solid #e2e8f0;
+          transition: all 0.3s;
         }
 
-        .feature-icon {
+        .detail-item:last-child {
+          border-bottom: none;
+        }
+
+        .detail-item:hover {
+          padding-left: 8px;
+        }
+
+        .detail-icon {
+          flex-shrink: 0;
+          width: 48px;
+          height: 48px;
+          background: #ffffff;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           color: #8b5cf6;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .feature-card h3 {
-          margin: 15px 0 10px;
-          color: #0f172a;
-          font-size: 1.1rem;
+        .detail-content {
+          flex: 1;
+        }
+
+        .detail-content h3 {
           font-family: "Times New Roman", Times, serif;
+          font-size: 1.1rem;
           font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 4px;
         }
 
-        .feature-card p {
-          color: #475569;
-          font-size: 0.9rem;
-          line-height: 1.6;
+        .detail-content p {
           font-family: "Poppins", sans-serif;
+          font-size: 0.95rem;
+          color: #475569;
+          line-height: 1.6;
+          margin: 0;
         }
 
         /* COURSES */
@@ -1110,9 +1152,6 @@ const GenAIPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* FOOTER */
-       
-
         /* ========== RESPONSIVE DESIGN ========== */
 
         /* Tablets & Small Laptops */
@@ -1125,11 +1164,6 @@ const GenAIPage = () => {
 
           .hero-title {
             font-size: 3rem;
-          }
-
-          .features-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
           }
 
           .courses-grid {
@@ -1163,6 +1197,10 @@ const GenAIPage = () => {
           .cta-section h2 {
             font-size: 3rem;
           }
+
+          .course-details-list {
+            padding: 30px 24px;
+          }
         }
 
         /* Mobile Landscape & Tablets */
@@ -1192,16 +1230,6 @@ const GenAIPage = () => {
 
           .hero-buttons {
             justify-content: center;
-          }
-
-          .hero-overlay {
-            background: linear-gradient(
-              to bottom,
-              rgba(2, 6, 23, 0.95) 0%,
-              rgba(15, 23, 42, 0.85) 30%,
-              rgba(88, 28, 135, 0.8) 60%,
-              rgba(139, 92, 246, 0.7) 100%
-            );
           }
 
           .hero-badge {
@@ -1258,21 +1286,31 @@ const GenAIPage = () => {
             font-size: 0.95rem;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+          .course-details-list {
+            padding: 24px 16px;
             margin-top: 40px;
           }
 
-          .feature-card {
-            padding: 20px;
+          .detail-item {
+            padding: 14px 0;
+            gap: 16px;
           }
 
-          .feature-card h3 {
+          .detail-icon {
+            width: 40px;
+            height: 40px;
+          }
+
+          .detail-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          .detail-content h3 {
             font-size: 1rem;
           }
 
-          .feature-card p {
+          .detail-content p {
             font-size: 0.85rem;
           }
 
@@ -1387,11 +1425,6 @@ const GenAIPage = () => {
             justify-content: center;
             padding: 14px 25px;
           }
-
-          .footer {
-            padding: 20px 0;
-            font-size: 0.85rem;
-          }
         }
 
         /* Mobile Phones */
@@ -1480,13 +1513,31 @@ const GenAIPage = () => {
             font-size: 0.9rem;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr;
+          .course-details-list {
+            padding: 18px 12px;
+          }
+
+          .detail-item {
+            padding: 12px 0;
             gap: 12px;
           }
 
-          .feature-card {
-            padding: 18px 16px;
+          .detail-icon {
+            width: 36px;
+            height: 36px;
+          }
+
+          .detail-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          .detail-content h3 {
+            font-size: 0.95rem;
+          }
+
+          .detail-content p {
+            font-size: 0.8rem;
           }
 
           .courses-grid {
@@ -1561,11 +1612,6 @@ const GenAIPage = () => {
           .cta-note {
             font-size: 0.85rem;
           }
-
-          .footer {
-            font-size: 0.75rem;
-            padding: 15px 0;
-          }
         }
 
         /* Very Small Devices */
@@ -1580,22 +1626,6 @@ const GenAIPage = () => {
 
           .stats-grid {
             grid-template-columns: 1fr;
-          }
-
-          .feature-card {
-            padding: 15px;
-          }
-
-          .feature-card h3 {
-            font-size: 0.95rem;
-          }
-
-          .feature-card p {
-            font-size: 0.8rem;
-          }
-
-          .course-card h3 {
-            font-size: 0.9rem;
           }
 
           .section-header h2 {

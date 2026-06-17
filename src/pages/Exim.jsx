@@ -17,7 +17,9 @@ import {
   Mail,
   Phone,
   MapPin,
-  Shield
+  Shield,
+  List,
+  Info
 } from 'lucide-react';
 
 const EximPage = () => {
@@ -94,7 +96,7 @@ const EximPage = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Complete End-to-End Journey with List */}
       <section className="about-section">
         <div className="container">
           <div className="section-header">
@@ -106,46 +108,87 @@ const EximPage = () => {
               Perfect if you want to start a business or build a career in global trade.
             </p>
           </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>For Who</h3>
-              <p>Budding entrepreneurs, aspiring exporters, students wanting to work in trade</p>
+          
+          {/* Course Details as List */}
+          <div className="course-details-list">
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>For Who</h3>
+                <p>Budding entrepreneurs, aspiring exporters, students wanting to work in trade</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <BookOpen size={28} className="feature-icon" />
-              <h3>Pre-Req</h3>
-              <p>Basic English understanding</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <BookOpen size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Pre-Req</h3>
+                <p>Basic English understanding</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Clock size={28} className="feature-icon" />
-              <h3>Duration</h3>
-              <p>40 Hours | ~3.5 Months</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Clock size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Duration</h3>
+                <p>40 Hours | ~3.5 Months</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Calendar size={28} className="feature-icon" />
-              <h3>Schedule</h3>
-              <p>2 sessions/week OR Weekend-only batches</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Calendar size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Schedule</h3>
+                <p>2 sessions/week OR Weekend-only batches</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Monitor size={28} className="feature-icon" />
-              <h3>Session</h3>
-              <p>1.5 – 2 hrs per session</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Monitor size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Session</h3>
+                <p>1.5 – 2 hrs per session</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Globe size={28} className="feature-icon" />
-              <h3>Mode</h3>
-              <p>Hybrid</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Globe size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Mode</h3>
+                <p>Hybrid</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>Batch Size</h3>
-              <p>Max 25 students</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Batch Size</h3>
+                <p>Max 25 students</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Award size={28} className="feature-icon" />
-              <h3>Certificate</h3>
-              <p>Certificate of Completion from MILES</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Award size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Certificate</h3>
+                <p>Certificate of Completion from MILES</p>
+              </div>
             </div>
           </div>
         </div>
@@ -553,52 +596,70 @@ const EximPage = () => {
           font-size: 1rem;
         }
 
-        /* ABOUT */
+        /* ABOUT - LIST STYLES */
         .about-section {
           padding: 80px 0 120px;
           background: #ffffff;
         }
 
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 24px;
-          margin-top: 70px;
-        }
-
-        .feature-card {
-          padding: 28px 24px;
-          border-radius: 20px;
-          background: white;
+        .course-details-list {
+          max-width: 900px;
+          margin: 60px auto 0;
+          background: #f8fafc;
+          border-radius: 24px;
+          padding: 40px;
           border: 1px solid #e2e8f0;
-          transition: all 0.4s;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          font-family: "Poppins", sans-serif;
         }
 
-        .feature-card:hover {
-          transform: translateY(-10px);
-          border-color: #f97316;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        .detail-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          padding: 18px 0;
+          border-bottom: 1px solid #e2e8f0;
+          transition: all 0.3s;
         }
 
-        .feature-icon {
+        .detail-item:last-child {
+          border-bottom: none;
+        }
+
+        .detail-item:hover {
+          padding-left: 8px;
+        }
+
+        .detail-icon {
+          flex-shrink: 0;
+          width: 48px;
+          height: 48px;
+          background: #ffffff;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           color: #f97316;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .feature-card h3 {
-          margin: 15px 0 10px;
-          color: #0f172a;
-          font-size: 1.1rem;
+        .detail-content {
+          flex: 1;
+        }
+
+        .detail-content h3 {
           font-family: "Times New Roman", Times, serif;
+          font-size: 1.1rem;
           font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 4px;
         }
 
-        .feature-card p {
-          color: #64748b;
-          font-size: 0.9rem;
-          line-height: 1.6;
+        .detail-content p {
           font-family: "Poppins", sans-serif;
+          font-size: 0.95rem;
+          color: #64748b;
+          line-height: 1.6;
+          margin: 0;
         }
 
         /* COURSES */
@@ -901,9 +962,6 @@ const EximPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* FOOTER */
-       
-
         /* ========== RESPONSIVE DESIGN ========== */
 
         /* Tablets & Small Laptops */
@@ -916,11 +974,6 @@ const EximPage = () => {
 
           .hero-title {
             font-size: 3rem;
-          }
-
-          .features-grid {
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
           }
 
           .courses-grid {
@@ -941,6 +994,10 @@ const EximPage = () => {
 
           .cta-section h2 {
             font-size: 3rem;
+          }
+
+          .course-details-list {
+            padding: 30px 24px;
           }
         }
 
@@ -1036,21 +1093,31 @@ const EximPage = () => {
             font-size: 0.95rem;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+          .course-details-list {
+            padding: 24px 16px;
             margin-top: 40px;
           }
 
-          .feature-card {
-            padding: 20px;
+          .detail-item {
+            padding: 14px 0;
+            gap: 16px;
           }
 
-          .feature-card h3 {
+          .detail-icon {
+            width: 40px;
+            height: 40px;
+          }
+
+          .detail-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          .detail-content h3 {
             font-size: 1rem;
           }
 
-          .feature-card p {
+          .detail-content p {
             font-size: 0.85rem;
           }
 
@@ -1141,11 +1208,6 @@ const EximPage = () => {
             justify-content: center;
             padding: 14px 25px;
           }
-
-          .footer {
-            padding: 20px 0;
-            font-size: 0.85rem;
-          }
         }
 
         /* Mobile Phones */
@@ -1234,13 +1296,31 @@ const EximPage = () => {
             font-size: 0.9rem;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr;
+          .course-details-list {
+            padding: 18px 12px;
+          }
+
+          .detail-item {
+            padding: 12px 0;
             gap: 12px;
           }
 
-          .feature-card {
-            padding: 18px 16px;
+          .detail-icon {
+            width: 36px;
+            height: 36px;
+          }
+
+          .detail-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          .detail-content h3 {
+            font-size: 0.95rem;
+          }
+
+          .detail-content p {
+            font-size: 0.8rem;
           }
 
           .courses-grid {
@@ -1297,11 +1377,6 @@ const EximPage = () => {
           .cta-note {
             font-size: 0.85rem;
           }
-
-          .footer {
-            font-size: 0.75rem;
-            padding: 15px 0;
-          }
         }
 
         /* Very Small Devices */
@@ -1318,22 +1393,6 @@ const EximPage = () => {
             grid-template-columns: 1fr;
           }
 
-          .feature-card {
-            padding: 15px;
-          }
-
-          .feature-card h3 {
-            font-size: 0.95rem;
-          }
-
-          .feature-card p {
-            font-size: 0.8rem;
-          }
-
-          .course-card h3 {
-            font-size: 0.95rem;
-          }
-
           .section-header h2 {
             font-size: 1.5rem;
           }
@@ -1347,6 +1406,14 @@ const EximPage = () => {
           .cta-tertiary {
             font-size: 0.85rem;
             padding: 10px 16px;
+          }
+
+          .detail-content h3 {
+            font-size: 0.9rem;
+          }
+
+          .detail-content p {
+            font-size: 0.75rem;
           }
         }
       `}</style>

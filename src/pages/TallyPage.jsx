@@ -31,7 +31,7 @@ const TallyPage = () => {
         <div className="hero-background">
           <img src="/assets/images/tally1.png" alt="Tally Background" />
         </div>
-        <div className="hero-overlay"></div>
+        
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content fade-up">
@@ -97,7 +97,7 @@ const TallyPage = () => {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Section - Complete Tally Prime 7.0 Mastery with List */}
       <section className="about-section">
         <div className="container">
           <div className="section-header">
@@ -109,46 +109,87 @@ const TallyPage = () => {
               certificate.
             </p>
           </div>
-          <div className="features-grid">
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>For Who</h3>
-              <p>12th pass students, commerce background preferred</p>
+          
+          {/* Course Details as List */}
+          <div className="course-details-list">
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>For Who</h3>
+                <p>12th pass students, commerce background preferred</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <BookOpen size={28} className="feature-icon" />
-              <h3>Pre-Req</h3>
-              <p>12th pass</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <BookOpen size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Pre-Req</h3>
+                <p>12th pass</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Clock size={28} className="feature-icon" />
-              <h3>Duration</h3>
-              <p>3 Months</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Clock size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Duration</h3>
+                <p>3 Months</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Calendar size={28} className="feature-icon" />
-              <h3>Schedule</h3>
-              <p>Daily sessions</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Calendar size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Schedule</h3>
+                <p>Daily sessions</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Monitor size={28} className="feature-icon" />
-              <h3>Session</h3>
-              <p>1.5 hours/day</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Monitor size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Session</h3>
+                <p>1.5 hours/day</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Monitor size={28} className="feature-icon" />
-              <h3>Mode</h3>
-              <p>Online – Live</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Monitor size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Mode</h3>
+                <p>Online – Live</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Users size={28} className="feature-icon" />
-              <h3>Batch Size</h3>
-              <p>Max 30 students</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Users size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Batch Size</h3>
+                <p>Max 30 students</p>
+              </div>
             </div>
-            <div className="feature-card">
-              <Award size={28} className="feature-icon" />
-              <h3>Certificate</h3>
-              <p>Yes — Industry Recognised Certificate</p>
+
+            <div className="detail-item">
+              <div className="detail-icon">
+                <Award size={24} />
+              </div>
+              <div className="detail-content">
+                <h3>Certificate</h3>
+                <p>Yes — Industry Recognised Certificate</p>
+              </div>
             </div>
           </div>
         </div>
@@ -353,13 +394,6 @@ const TallyPage = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      {/* <footer className="footer">
-        <div className="container">
-          <p>© 2026 MILES TALLY. All rights reserved.</p>
-        </div>
-      </footer> */}
-
       <style jsx>{`
         @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
@@ -399,7 +433,8 @@ const TallyPage = () => {
           object-fit: cover;
         }
 
-        
+       
+
         .hero-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -515,6 +550,7 @@ const TallyPage = () => {
 
         .primary-btn:hover {
           transform: translateY(-5px);
+          box-shadow: 0 20px 45px rgba(139, 92, 246, 0.45);
         }
 
         .secondary-btn {
@@ -534,6 +570,7 @@ const TallyPage = () => {
 
         .secondary-btn:hover {
           background: rgba(255,255,255,0.15);
+          transform: translateY(-5px);
         }
 
         .fade-up {
@@ -571,6 +608,7 @@ const TallyPage = () => {
 
         .stat-card:hover {
           transform: translateY(-10px);
+          box-shadow: 0 25px 60px rgba(0,0,0,0.12);
         }
 
         .stat-card svg {
@@ -616,50 +654,70 @@ const TallyPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* ABOUT */
+        /* ABOUT - LIST STYLES */
         .about-section {
           padding: 80px 0 120px;
+          background: #ffffff;
         }
 
-        .features-grid {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 24px;
-          margin-top: 70px;
-        }
-
-        .feature-card {
-          padding: 28px 24px;
-          border-radius: 20px;
-          background: white;
+        .course-details-list {
+          max-width: 900px;
+          margin: 60px auto 0;
+          background: #f8fafc;
+          border-radius: 24px;
+          padding: 40px;
           border: 1px solid #e2e8f0;
-          transition: 0.4s;
-          box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-          font-family: "Poppins", sans-serif;
         }
 
-        .feature-card:hover {
-          transform: translateY(-10px);
-          border-color: #8b5cf6;
+        .detail-item {
+          display: flex;
+          align-items: flex-start;
+          gap: 20px;
+          padding: 18px 0;
+          border-bottom: 1px solid #e2e8f0;
+          transition: all 0.3s;
         }
 
-        .feature-icon {
+        .detail-item:last-child {
+          border-bottom: none;
+        }
+
+        .detail-item:hover {
+          padding-left: 8px;
+        }
+
+        .detail-icon {
+          flex-shrink: 0;
+          width: 48px;
+          height: 48px;
+          background: #ffffff;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           color: #8b5cf6;
+          border: 1px solid #e2e8f0;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
-        .feature-card h3 {
-          margin: 15px 0 10px;
-          color: #0f172a;
-          font-size: 16px;
+        .detail-content {
+          flex: 1;
+        }
+
+        .detail-content h3 {
           font-family: "Times New Roman", "Poppins", serif;
+          font-size: 1.1rem;
           font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 4px;
         }
 
-        .feature-card p {
-          color: #64748b;
-          font-size: 14px;
-          line-height: 1.6;
+        .detail-content p {
           font-family: "Poppins", sans-serif;
+          font-size: 0.95rem;
+          color: #64748b;
+          line-height: 1.6;
+          margin: 0;
         }
 
         /* COURSES */
@@ -682,10 +740,13 @@ const TallyPage = () => {
           transition: 0.4s;
           box-shadow: 0 15px 40px rgba(0,0,0,0.06);
           font-family: "Poppins", sans-serif;
+          border: 1px solid #e2e8f0;
         }
 
         .course-card:hover {
           transform: translateY(-12px);
+          border-color: #8b5cf6;
+          box-shadow: 0 20px 50px rgba(139, 92, 246, 0.1);
         }
 
         .course-card svg {
@@ -717,6 +778,12 @@ const TallyPage = () => {
           gap: 8px;
           cursor: pointer;
           font-family: "Poppins", sans-serif;
+          transition: all 0.3s;
+        }
+
+        .course-card button:hover {
+          color: #8b5cf6;
+          gap: 12px;
         }
 
         /* FEATURES SHOWCASE */
@@ -886,6 +953,12 @@ const TallyPage = () => {
           backdrop-filter: blur(10px);
           font-weight: 500;
           font-family: "Poppins", sans-serif;
+          transition: all 0.3s;
+        }
+
+        .hire-card:hover {
+          background: rgba(255,255,255,0.15);
+          transform: translateY(-5px);
         }
 
         .hire-card svg {
@@ -917,6 +990,7 @@ const TallyPage = () => {
         .benefit-card:hover {
           transform: translateY(-10px);
           border-color: #8b5cf6;
+          box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
         }
 
         .benefit-icon-wrapper {
@@ -925,6 +999,7 @@ const TallyPage = () => {
           background: white;
           border-radius: 16px;
           margin-bottom: 20px;
+          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .benefit-icon {
@@ -999,6 +1074,7 @@ const TallyPage = () => {
 
         .cta-primary:hover {
           transform: translateY(-5px);
+          box-shadow: 0 20px 45px rgba(139, 92, 246, 0.4);
         }
 
         .cta-secondary {
@@ -1018,6 +1094,7 @@ const TallyPage = () => {
 
         .cta-secondary:hover {
           background: rgba(255,255,255,0.2);
+          transform: translateY(-5px);
         }
 
         .cta-tertiary {
@@ -1037,23 +1114,13 @@ const TallyPage = () => {
 
         .cta-tertiary:hover {
           background: rgba(255,255,255,0.15);
+          transform: translateY(-5px);
         }
 
         .cta-note {
           margin-top: 30px;
           font-size: 14px;
           color: #94a3b8;
-          font-family: "Poppins", sans-serif;
-        }
-
-        /* FOOTER */
-        .footer {
-          background: #020617;
-          padding: 30px 0;
-          text-align: center;
-          color: #64748b;
-          font-size: 14px;
-          border-top: 1px solid rgba(255,255,255,0.05);
           font-family: "Poppins", sans-serif;
         }
 
@@ -1066,10 +1133,6 @@ const TallyPage = () => {
 
           .hero-title {
             font-size: 3rem;
-          }
-
-          .features-grid {
-            grid-template-columns: repeat(2, 1fr);
           }
 
           .courses-grid {
@@ -1090,6 +1153,10 @@ const TallyPage = () => {
 
           .hires-grid {
             grid-template-columns: 1fr 1fr;
+          }
+
+          .course-details-list {
+            padding: 30px 24px;
           }
         }
 
@@ -1137,11 +1204,6 @@ const TallyPage = () => {
             gap: 15px;
           }
 
-          .features-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-          }
-
           .courses-grid {
             grid-template-columns: 1fr;
           }
@@ -1174,8 +1236,36 @@ const TallyPage = () => {
             font-size: 1.5rem;
           }
 
-          .feature-card {
-            padding: 20px;
+          .about-section {
+            padding: 60px 0 80px;
+          }
+
+          .course-details-list {
+            padding: 24px 16px;
+            margin-top: 40px;
+          }
+
+          .detail-item {
+            padding: 14px 0;
+            gap: 16px;
+          }
+
+          .detail-icon {
+            width: 40px;
+            height: 40px;
+          }
+
+          .detail-icon svg {
+            width: 20px;
+            height: 20px;
+          }
+
+          .detail-content h3 {
+            font-size: 1rem;
+          }
+
+          .detail-content p {
+            font-size: 0.85rem;
           }
 
           .cta-buttons {
@@ -1193,10 +1283,6 @@ const TallyPage = () => {
 
         @media (max-width: 480px) {
           .stats-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .features-grid {
             grid-template-columns: 1fr;
           }
 
@@ -1220,6 +1306,59 @@ const TallyPage = () => {
 
           .hero-section {
             min-height: 70vh;
+          }
+
+          .course-details-list {
+            padding: 18px 12px;
+          }
+
+          .detail-item {
+            padding: 12px 0;
+            gap: 12px;
+          }
+
+          .detail-icon {
+            width: 36px;
+            height: 36px;
+          }
+
+          .detail-icon svg {
+            width: 18px;
+            height: 18px;
+          }
+
+          .detail-content h3 {
+            font-size: 0.95rem;
+          }
+
+          .detail-content p {
+            font-size: 0.8rem;
+          }
+
+          .section-header h2 {
+            font-size: 1.8rem;
+          }
+
+          .cta-section h2 {
+            font-size: 2rem;
+          }
+        }
+
+        @media (max-width: 360px) {
+          .hero-title {
+            font-size: 1.6rem;
+          }
+
+          .hero-title span {
+            font-size: 1.6rem;
+          }
+
+          .section-header h2 {
+            font-size: 1.5rem;
+          }
+
+          .cta-section h2 {
+            font-size: 1.6rem;
           }
         }
       `}</style>
