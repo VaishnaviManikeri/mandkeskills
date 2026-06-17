@@ -138,6 +138,13 @@ export default function Navbar() {
     setIsSearchOpen(false);
   };
 
+  // Open Google Form in a new tab
+  const openInterestForm = () => {
+    window.open("https://docs.google.com/forms/d/e/1FAIpQLSdYkMi78TLwol39eBaIE2kBU3MRWxnkIk3RaSJojHtpjMp_Mw/viewform", "_blank");
+    setMobileOpen(false);
+    setCoursesOpen(false);
+  };
+
   return (
     <>
       <style>{`
@@ -269,6 +276,34 @@ export default function Navbar() {
 
         .chevron { transition: transform 0.25s; }
         .chevron.open { transform: rotate(180deg); }
+
+        /* ── APPLY BUTTON ── */
+        .apply-btn {
+          background: linear-gradient(135deg, #38BDF8, #0EA5E9);
+          color: #ffffff;
+          padding: 9px 22px;
+          border-radius: 10px;
+          font-size: 14.5px;
+          font-weight: 600;
+          border: none;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          font-family: 'Poppins', sans-serif;
+          white-space: nowrap;
+          text-decoration: none;
+        }
+
+        .apply-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+          background: linear-gradient(135deg, #0EA5E9, #0284C7);
+        }
+
+        .apply-btn svg { flex-shrink: 0; }
 
         /* ── SEARCH SECTION ── */
         .search-section {
@@ -1144,6 +1179,17 @@ export default function Navbar() {
             </li>
           </ul>
 
+          {/* Apply Now Button - Right */}
+          <div className="search-section">
+            <button className="apply-btn" onClick={openInterestForm}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M22 2L11 13"/>
+                <path d="M22 2L15 22l-4-9-9-4z"/>
+              </svg>
+              Apply Now
+            </button>
+          </div>
+
           {/* Search - Right */}
           <div className="search-section" ref={searchRef}>
             {isSearchOpen ? (
@@ -1319,9 +1365,9 @@ export default function Navbar() {
 
           <div className="mobile-divider" />
 
-          <Link to="/apply" className="mobile-cta" onClick={() => setMobileOpen(false)}>
-            Enrol Now — Start Your Journey →
-          </Link>
+          <button className="mobile-cta" onClick={openInterestForm}>
+            Apply Now — Express Your Interest →
+          </button>
         </div>
       )}
     </>
