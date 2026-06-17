@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import './App.css';
+import './App.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Courses from "./pages/Courses";
@@ -12,7 +12,7 @@ import HackingPage from "./pages/HackingPage";
 import GenAIPage from "./pages/GenAIPage";
 import AIPage from "./pages/AIPage";
 import PersonalityPage from "./pages/PersonalityPage";
-// import About from "./pages/About";
+import About from "./pages/About";
 // import Services from "./pages/Services";
 import Contact from "./pages/ContactPage";
 
@@ -35,6 +35,7 @@ function App() {
           <Route path="/courses/ethical-hacking" element={<HackingPage />} />
           <Route path="/courses/ai-data-science" element={<AIPage />} />
           <Route path="/courses/genai-ml" element={<GenAIPage />} />
+          <Route path="/about" element={<About />} />
           {/* <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} /> */}
           <Route path="/contact" element={<Contact />} />

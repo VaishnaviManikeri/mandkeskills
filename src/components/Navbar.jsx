@@ -38,6 +38,8 @@ export default function Navbar() {
       setActivePage("Courses");
     } else if (path === "/contact") {
       setActivePage("Contact");
+    } else if (path === "/about") {
+      setActivePage("About");
     } else if (path.startsWith("/courses/")) {
       setActivePage("Courses");
     }
@@ -1058,6 +1060,21 @@ export default function Navbar() {
               </Link>
             </li>
 
+            <li>
+              <Link
+                to="/about"
+                className={`nav-link ${activePage === "About" ? "active" : ""}`}
+                onClick={() => setCoursesOpen(false)}
+              >
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/>
+                  <line x1="12" y1="16" x2="12" y2="12"/>
+                  <line x1="12" y1="8" x2="12.01" y2="8"/>
+                </svg>
+                About MILES
+              </Link>
+            </li>
+
             <li style={{ position: "relative" }}>
               <button
                 ref={courseBtnRef}
@@ -1249,6 +1266,17 @@ export default function Navbar() {
             <div className="mobile-nav-item-left">
               <div className="mobile-icon-wrap">🏠</div>
               <span>Home</span>
+            </div>
+          </Link>
+
+          <Link
+            to="/about"
+            className={`mobile-nav-item ${activePage === "About" ? "active" : ""}`}
+            onClick={() => { setMobileOpen(false); setMobileCoursesOpen(false); }}
+          >
+            <div className="mobile-nav-item-left">
+              <div className="mobile-icon-wrap">ℹ️</div>
+              <span>About MILES</span>
             </div>
           </Link>
 
