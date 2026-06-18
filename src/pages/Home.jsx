@@ -1,5 +1,5 @@
 import "./Home.css";
-import heroImage from "/assets/images/hero.png";
+import heroImage from "/assets/images/cover.png";
 import image1 from "/assets/images/1.png";
 import image2 from "/assets/images/2.png";
 import image3 from "/assets/images/3.png";
