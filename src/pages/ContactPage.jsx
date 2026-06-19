@@ -26,7 +26,7 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
-          <img src="/assets/images/contact.png" alt="Contact Us Background" />
+          <img src="/assets/images/cont.png" alt="Contact Us Background" />
         </div>
         <div className="container">
           <div className="hero-grid">

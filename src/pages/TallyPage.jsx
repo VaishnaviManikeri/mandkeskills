@@ -29,9 +29,8 @@ const TallyPage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
-          <img src="/assets/images/tally1.png" alt="Tally Background" />
+          <img src="/assets/images/tp.png" alt="Tally Background" />
         </div>
-        
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content fade-up">
@@ -110,85 +109,93 @@ const TallyPage = () => {
             </p>
           </div>
           
-          {/* Course Details as List */}
+          {/* Course Details as List - 4 in first column, 4 in second column */}
           <div className="course-details-list">
-            <div className="detail-item">
-              <div className="detail-icon">
-                <Users size={24} />
-              </div>
-              <div className="detail-content">
-                <h3>For Who</h3>
-                <p>12th pass students, commerce background preferred</p>
-              </div>
-            </div>
+            <div className="course-details-grid">
+              {/* Column 1 */}
+              <div className="details-column">
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <Users size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>For Who</h3>
+                    <p>12th pass students, commerce background preferred</p>
+                  </div>
+                </div>
 
-            <div className="detail-item">
-              <div className="detail-icon">
-                <BookOpen size={24} />
-              </div>
-              <div className="detail-content">
-                <h3>Pre-Req</h3>
-                <p>12th pass</p>
-              </div>
-            </div>
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <BookOpen size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>Pre-Req</h3>
+                    <p>12th pass</p>
+                  </div>
+                </div>
 
-            <div className="detail-item">
-              <div className="detail-icon">
-                <Clock size={24} />
-              </div>
-              <div className="detail-content">
-                <h3>Duration</h3>
-                <p>3 Months</p>
-              </div>
-            </div>
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <Clock size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>Duration</h3>
+                    <p>3 Months</p>
+                  </div>
+                </div>
 
-            <div className="detail-item">
-              <div className="detail-icon">
-                <Calendar size={24} />
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <Calendar size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>Schedule</h3>
+                    <p>Daily sessions</p>
+                  </div>
+                </div>
               </div>
-              <div className="detail-content">
-                <h3>Schedule</h3>
-                <p>Daily sessions</p>
-              </div>
-            </div>
 
-            <div className="detail-item">
-              <div className="detail-icon">
-                <Monitor size={24} />
-              </div>
-              <div className="detail-content">
-                <h3>Session</h3>
-                <p>1.5 hours/day</p>
-              </div>
-            </div>
+              {/* Column 2 */}
+              <div className="details-column">
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <Monitor size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>Session</h3>
+                    <p>1.5 hours/day</p>
+                  </div>
+                </div>
 
-            <div className="detail-item">
-              <div className="detail-icon">
-                <Monitor size={24} />
-              </div>
-              <div className="detail-content">
-                <h3>Mode</h3>
-                <p>Online – Live</p>
-              </div>
-            </div>
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <Monitor size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>Mode</h3>
+                    <p>Online – Live</p>
+                  </div>
+                </div>
 
-            <div className="detail-item">
-              <div className="detail-icon">
-                <Users size={24} />
-              </div>
-              <div className="detail-content">
-                <h3>Batch Size</h3>
-                <p>Max 30 students</p>
-              </div>
-            </div>
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <Users size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>Batch Size</h3>
+                    <p>Max 30 students</p>
+                  </div>
+                </div>
 
-            <div className="detail-item">
-              <div className="detail-icon">
-                <Award size={24} />
-              </div>
-              <div className="detail-content">
-                <h3>Certificate</h3>
-                <p>Yes — Industry Recognised Certificate</p>
+                <div className="detail-item">
+                  <div className="detail-icon">
+                    <Award size={24} />
+                  </div>
+                  <div className="detail-content">
+                    <h3>Certificate</h3>
+                    <p>Yes — Industry Recognised Certificate</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -409,14 +416,14 @@ const TallyPage = () => {
           margin: auto;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - Pure White Background */
         .hero-section {
           position: relative;
           min-height: 100vh;
           display: flex;
           align-items: center;
           overflow: hidden;
-          background: none;
+          background: #ffffff;
         }
 
         .hero-background {
@@ -432,8 +439,6 @@ const TallyPage = () => {
           height: 100%;
           object-fit: cover;
         }
-
-       
 
         .hero-grid {
           display: grid;
@@ -458,11 +463,10 @@ const TallyPage = () => {
           gap: 10px;
           padding: 12px 22px;
           border-radius: 50px;
-          background: rgba(139, 92, 246, 0.15);
-          border: 1px solid rgba(139, 92, 246, 0.3);
-          color: #a78bfa;
+          background: #dbeafe;
+          border: 1px solid #93c5fd;
+          color: #1e40af;
           font-weight: 600;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
@@ -476,19 +480,19 @@ const TallyPage = () => {
           font-weight: 800;
           line-height: 1.1;
           margin-top: 25px;
-          color: white;
+          color: #0f172a;
           font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-title span {
           display: block;
-          color: #8b5cf6;
+          color: #2563eb;
           font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-description {
           margin-top: 25px;
-          color: #cbd5e1;
+          color: #475569;
           font-size: 1.1rem;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
@@ -507,18 +511,18 @@ const TallyPage = () => {
           gap: 8px;
           padding: 10px 22px;
           border-radius: 50px;
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           font-weight: 500;
           font-size: 14px;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
         .tag-icon {
           width: 18px;
           height: 18px;
+          color: #2563eb;
         }
 
         .hero-buttons {
@@ -531,8 +535,8 @@ const TallyPage = () => {
         .primary-btn {
           background: linear-gradient(
             135deg,
-            #8b5cf6,
-            #7c3aed
+            #3b82f6,
+            #2563eb
           );
           color: white;
           border: none;
@@ -544,23 +548,22 @@ const TallyPage = () => {
           gap: 10px;
           align-items: center;
           transition: 0.4s ease;
-          box-shadow: 0 15px 35px rgba(139, 92, 246, 0.35);
+          box-shadow: 0 15px 35px rgba(59, 130, 246, 0.35);
           font-family: "Poppins", sans-serif;
         }
 
         .primary-btn:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 45px rgba(139, 92, 246, 0.45);
+          box-shadow: 0 20px 45px rgba(59, 130, 246, 0.45);
         }
 
         .secondary-btn {
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           padding: 15px 30px;
           border-radius: 14px;
           cursor: pointer;
-          backdrop-filter: blur(10px);
           transition: 0.4s;
           display: flex;
           gap: 10px;
@@ -569,7 +572,7 @@ const TallyPage = () => {
         }
 
         .secondary-btn:hover {
-          background: rgba(255,255,255,0.15);
+          background: #e2e8f0;
           transform: translateY(-5px);
         }
 
@@ -604,15 +607,17 @@ const TallyPage = () => {
           box-shadow: 0 20px 50px rgba(0,0,0,0.08);
           transition: 0.4s;
           font-family: "Poppins", sans-serif;
+          border: 1px solid #e2e8f0;
         }
 
         .stat-card:hover {
           transform: translateY(-10px);
-          box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
         }
 
         .stat-card svg {
-          color: #8b5cf6;
+          color: #3b82f6;
         }
 
         .stat-card h3 {
@@ -635,7 +640,7 @@ const TallyPage = () => {
         }
 
         .section-header span {
-          color: #8b5cf6;
+          color: #2563eb;
           font-weight: 700;
           font-family: "Poppins", sans-serif;
         }
@@ -654,7 +659,7 @@ const TallyPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* ABOUT - LIST STYLES */
+        /* ABOUT - LIST STYLES - 2 Column Grid */
         .about-section {
           padding: 80px 0 120px;
           background: #ffffff;
@@ -667,6 +672,17 @@ const TallyPage = () => {
           border-radius: 24px;
           padding: 40px;
           border: 1px solid #e2e8f0;
+        }
+
+        .course-details-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 20px 40px;
+        }
+
+        .details-column {
+          display: flex;
+          flex-direction: column;
         }
 
         .detail-item {
@@ -690,13 +706,13 @@ const TallyPage = () => {
           flex-shrink: 0;
           width: 48px;
           height: 48px;
-          background: #ffffff;
+          background: #dbeafe;
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #8b5cf6;
-          border: 1px solid #e2e8f0;
+          color: #2563eb;
+          border: 1px solid #93c5fd;
           box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
@@ -745,12 +761,12 @@ const TallyPage = () => {
 
         .course-card:hover {
           transform: translateY(-12px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 50px rgba(139, 92, 246, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
         }
 
         .course-card svg {
-          color: #8b5cf6;
+          color: #3b82f6;
         }
 
         .course-card h3 {
@@ -772,7 +788,7 @@ const TallyPage = () => {
           margin-top: 20px;
           border: none;
           background: transparent;
-          color: #7c3aed;
+          color: #2563eb;
           font-weight: 600;
           display: flex;
           gap: 8px;
@@ -782,7 +798,7 @@ const TallyPage = () => {
         }
 
         .course-card button:hover {
-          color: #8b5cf6;
+          color: #3b82f6;
           gap: 12px;
         }
 
@@ -810,18 +826,19 @@ const TallyPage = () => {
 
         .feature-showcase-card:hover {
           transform: translateY(-10px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .feature-showcase-icon {
           display: inline-flex;
           padding: 16px;
-          background: white;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
-          color: #8b5cf6;
+          color: #2563eb;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .feature-showcase-card h3 {
@@ -863,23 +880,24 @@ const TallyPage = () => {
 
         .skill-card:hover {
           transform: translateY(-8px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .skill-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: #f8fafc;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .skill-icon {
           width: 32px;
           height: 32px;
-          color: #8b5cf6;
+          color: #2563eb;
         }
 
         .skill-card h3 {
@@ -898,14 +916,14 @@ const TallyPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* HIRES */
+        /* HIRES - Sky Blue Footer Style */
         .hires-section {
           padding: 100px 0;
           background: linear-gradient(
             135deg,
-            #1e1b4b,
-            #312e81,
-            #4c1d95
+            #1e3a5f,
+            #0f172a,
+            #1e293b
           );
           text-align: center;
           color: white;
@@ -914,7 +932,7 @@ const TallyPage = () => {
         .hires-icon {
           width: 64px;
           height: 64px;
-          color: #8b5cf6;
+          color: #60a5fa;
           margin-bottom: 20px;
         }
 
@@ -954,6 +972,7 @@ const TallyPage = () => {
           font-weight: 500;
           font-family: "Poppins", sans-serif;
           transition: all 0.3s;
+          color: white;
         }
 
         .hire-card:hover {
@@ -962,7 +981,7 @@ const TallyPage = () => {
         }
 
         .hire-card svg {
-          color: #8b5cf6;
+          color: #60a5fa;
         }
 
         /* BENEFITS */
@@ -989,21 +1008,22 @@ const TallyPage = () => {
 
         .benefit-card:hover {
           transform: translateY(-10px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .benefit-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: white;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .benefit-icon {
-          color: #8b5cf6;
+          color: #2563eb;
           width: 32px;
           height: 32px;
         }
@@ -1023,14 +1043,15 @@ const TallyPage = () => {
           line-height: 1.6;
         }
 
-        /* CTA */
+        /* CTA - Sky Blue Footer Style */
         .cta-section {
           padding: 120px 20px;
           text-align: center;
           background: linear-gradient(
             135deg,
-            #1e1b4b,
-            #312e81
+            #1e3a5f,
+            #0f172a,
+            #1e293b
           );
           color: white;
         }
@@ -1057,7 +1078,7 @@ const TallyPage = () => {
         }
 
         .cta-primary {
-          background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+          background: linear-gradient(135deg, #3b82f6, #2563eb);
           color: white;
           border: none;
           padding: 16px 35px;
@@ -1069,12 +1090,12 @@ const TallyPage = () => {
           align-items: center;
           transition: 0.4s;
           font-family: "Poppins", sans-serif;
-          box-shadow: 0 15px 35px rgba(139, 92, 246, 0.3);
+          box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
         }
 
         .cta-primary:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 45px rgba(139, 92, 246, 0.4);
+          box-shadow: 0 20px 45px rgba(59, 130, 246, 0.4);
         }
 
         .cta-secondary {
@@ -1158,6 +1179,10 @@ const TallyPage = () => {
           .course-details-list {
             padding: 30px 24px;
           }
+
+          .course-details-grid {
+            gap: 20px;
+          }
         }
 
         @media (max-width: 768px) {
@@ -1182,16 +1207,6 @@ const TallyPage = () => {
 
           .hero-buttons {
             justify-content: center;
-          }
-
-          .hero-overlay {
-            background: linear-gradient(
-              to bottom,
-              rgba(2, 6, 23, 0.92) 0%,
-              rgba(15, 23, 42, 0.85) 30%,
-              rgba(88, 28, 135, 0.8) 60%,
-              rgba(120, 53, 155, 0.7) 100%
-            );
           }
 
           .section-header h2,
@@ -1243,6 +1258,11 @@ const TallyPage = () => {
           .course-details-list {
             padding: 24px 16px;
             margin-top: 40px;
+          }
+
+          .course-details-grid {
+            grid-template-columns: 1fr;
+            gap: 0;
           }
 
           .detail-item {

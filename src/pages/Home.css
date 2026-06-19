@@ -11,6 +11,10 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: #ffffff;
+}
+
 .home-page {
   overflow-x: hidden;
   background: #ffffff;
@@ -30,12 +34,7 @@ html {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    135deg,
-    #020617,
-    #0f172a,
-    #172554
-  );
+  background: #ffffff;
   overflow: hidden;
   padding: 80px 0;
 }
@@ -45,11 +44,12 @@ html {
   inset: 0;
   background:
     radial-gradient(circle at top right,
-      rgba(249, 115, 22, 0.25),
+      rgba(14, 165, 233, 0.06),
       transparent 35%),
     radial-gradient(circle at bottom left,
-      rgba(59, 130, 246, 0.25),
+      rgba(56, 189, 248, 0.06),
       transparent 35%);
+  pointer-events: none;
 }
 
 .hero-content {
@@ -64,39 +64,54 @@ html {
   align-items: center;
 }
 
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .hero-badge {
-  display: inline-block;
-  padding: 12px 22px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
   border-radius: 50px;
-  background: rgba(249, 115, 22, 0.15);
-  border: 1px solid rgba(249, 115, 22, 0.3);
-  color: #fb923c;
+  background: #e0f2fe;
+  color: #0369a1;
   font-weight: 600;
-  backdrop-filter: blur(10px);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
+  letter-spacing: 0.3px;
+  font-family: "Poppins", sans-serif;
+  width: fit-content;
+}
+
+.hero-badge svg {
+  color: #0ea5e9;
 }
 
 .hero-title {
-  font-size: 4rem;
+  font-size: 3.8rem;
   font-weight: 800;
   line-height: 1.1;
   margin-top: 25px;
-  color: white;
+  color: #0f172a;
   font-family: "Times New Roman", Times, serif;
 }
 
 .hero-title span {
   display: block;
-  color: #f97316;
+  color: #0ea5e9;
   font-family: "Times New Roman", Times, serif;
 }
 
 .hero-description {
   margin-top: 25px;
-  color: #cbd5e1;
+  color: #475569;
   font-size: 1.1rem;
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
+  max-width: 90%;
 }
 
 .hero-buttons {
@@ -107,62 +122,62 @@ html {
 }
 
 .primary-btn {
-  background: linear-gradient(
-    135deg,
-    #f97316,
-    #ea580c
-  );
+  background: #0ea5e9;
   color: white;
   border: none;
   padding: 15px 30px;
-  border-radius: 14px;
+  border-radius: 12px;
   font-weight: 600;
   cursor: pointer;
   display: flex;
   gap: 10px;
   align-items: center;
-  transition: 0.4s ease;
-  box-shadow: 0 15px 35px rgba(249, 115, 22, 0.35);
+  transition: 0.3s ease;
+  box-shadow: 0 10px 25px rgba(14, 165, 233, 0.25);
   font-size: 1rem;
   font-family: "Poppins", sans-serif;
 }
 
 .primary-btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 20px 45px rgba(249, 115, 22, 0.45);
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(14, 165, 233, 0.35);
+  background: #0284c7;
 }
 
 .secondary-btn {
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.15);
-  color: white;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  color: #0f172a;
   padding: 15px 30px;
-  border-radius: 14px;
+  border-radius: 12px;
   cursor: pointer;
-  backdrop-filter: blur(10px);
-  transition: 0.4s;
+  transition: 0.3s;
   font-size: 1rem;
   font-weight: 500;
   font-family: "Poppins", sans-serif;
 }
 
 .secondary-btn:hover {
-  background: rgba(255,255,255,0.15);
+  background: #e2e8f0;
+  border-color: #cbd5e1;
 }
 
 .hero-image-container {
   position: relative;
   display: flex;
   justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 .hero-glow {
   position: absolute;
-  width: 450px;
-  height: 450px;
-  background: rgba(249, 115, 22, 0.3);
+  width: 400px;
+  height: 400px;
+  background: rgba(14, 165, 233, 0.12);
   border-radius: 50%;
-  filter: blur(120px);
+  filter: blur(100px);
+  pointer-events: none;
 }
 
 .hero-image {
@@ -170,29 +185,10 @@ html {
   max-width: 650px;
   position: relative;
   z-index: 2;
+  display: block;
 }
 
-/* FLOATING ANIMATION */
-
-.floating {
-  animation: float 5s ease-in-out infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-20px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* FADE UP */
+/* FADE UP - only for text content */
 
 .fade-up {
   animation: fadeUp 1s ease;
@@ -226,21 +222,23 @@ html {
 }
 
 .stat-card {
-  background: white;
+  background: #ffffff;
   padding: 35px 20px;
   border-radius: 24px;
   text-align: center;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f1f5f9;
+  transition: 0.3s;
 }
 
 .stat-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-color: #e2e8f0;
 }
 
 .stat-card svg {
-  color: #2563eb;
+  color: #0ea5e9;
 }
 
 .stat-card h3 {
@@ -248,6 +246,7 @@ html {
   margin-top: 15px;
   color: #0f172a;
   font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
 }
 
 .stat-card p {
@@ -260,7 +259,7 @@ html {
 
 .why-choose-section {
   padding: 100px 0;
-  background: #f8fafc;
+  background: #fafcff;
 }
 
 /* Top Section - Images Left, Content Right */
@@ -286,14 +285,14 @@ html {
 .image-card {
   border-radius: 20px;
   overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-  transition: 0.4s;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  transition: 0.3s;
   aspect-ratio: 4/3;
 }
 
 .image-card:hover {
   transform: scale(1.03);
-  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
 }
 
 .image-card img {
@@ -315,10 +314,10 @@ html {
 }
 
 .section-header-left span {
-  color: #f97316;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  color: #0ea5e9;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -329,11 +328,12 @@ html {
   color: #0f172a;
   line-height: 1.2;
   font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
 }
 
 .section-header-left p {
   margin-top: 20px;
-  color: #64748b;
+  color: #475569;
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
 }
@@ -355,29 +355,29 @@ html {
   align-items: center;
   text-align: center;
   padding: 30px 20px;
-  background: white;
+  background: #ffffff;
   border-radius: 16px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-  transition: 0.4s;
-  border: 1px solid transparent;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  transition: 0.3s;
+  border: 1px solid #f1f5f9;
 }
 
 .feature-item:hover {
-  transform: translateY(-8px);
-  border-color: #f97316;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  transform: translateY(-6px);
+  border-color: #0ea5e9;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
 }
 
 .feature-icon {
   flex-shrink: 0;
   width: 55px;
   height: 55px;
-  background: rgba(249, 115, 22, 0.1);
-  border-radius: 12px;
+  background: #e0f2fe;
+  border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #f97316;
+  color: #0ea5e9;
   margin-bottom: 15px;
 }
 
@@ -405,10 +405,10 @@ html {
 }
 
 .section-header span {
-  color: #f97316;
-  font-weight: 700;
-  font-size: 0.9rem;
-  letter-spacing: 1px;
+  color: #0ea5e9;
+  font-weight: 600;
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
 }
@@ -418,6 +418,7 @@ html {
   margin-top: 15px;
   color: #0f172a;
   font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
 }
 
 .section-header p {
@@ -442,25 +443,32 @@ html {
 }
 
 .course-card {
-  background: #f8fafc;
+  background: #ffffff;
   padding: 35px 30px;
   border-radius: 24px;
-  transition: 0.4s;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.04);
-  border: 1px solid #e2e8f0;
+  transition: 0.3s;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .course-card:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 25px 60px rgba(0,0,0,0.08);
-  border-color: #f97316;
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  border-color: #0ea5e9;
 }
 
-.course-card svg {
-  color: #f97316;
+.course-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: #e0f2fe;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0ea5e9;
 }
 
 .course-card h3 {
@@ -469,6 +477,7 @@ html {
   font-size: 1.2rem;
   line-height: 1.4;
   font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
 }
 
 .course-card p {
@@ -483,7 +492,7 @@ html {
   margin-top: auto;
   border: none;
   background: transparent;
-  color: #2563eb;
+  color: #0ea5e9;
   font-weight: 600;
   display: inline-flex;
   gap: 8px;
@@ -496,8 +505,8 @@ html {
 }
 
 .course-link:hover {
-  color: #f97316;
-  gap: 15px;
+  color: #0284c7;
+  gap: 14px;
 }
 
 /* CTA */
@@ -505,23 +514,21 @@ html {
 .cta-section {
   padding: 120px 20px;
   text-align: center;
-  background: linear-gradient(
-    135deg,
-    #172554,
-    #020617
-  );
-  color: white;
+  background: #fafcff;
+  border-top: 1px solid #f1f5f9;
+  color: #0f172a;
 }
 
 .cta-section h2 {
   font-size: 3.5rem;
   font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
 }
 
 .cta-section p {
   max-width: 700px;
   margin: 25px auto;
-  color: #cbd5e1;
+  color: #475569;
   line-height: 1.8;
   font-family: "Poppins", sans-serif;
 }
@@ -588,10 +595,12 @@ html {
 
   .hero-text {
     order: 1;
+    height: auto;
   }
 
   .hero-image-container {
     order: 0;
+    height: auto;
   }
 
   .hero-title {
@@ -600,11 +609,16 @@ html {
 
   .hero-badge {
     font-size: 0.8rem;
-    padding: 10px 18px;
+    padding: 8px 16px;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .hero-description {
     font-size: 1rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .hero-buttons {
@@ -708,7 +722,7 @@ html {
   }
 
   .cta-section h2 {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 
   .cta-section p {
@@ -752,7 +766,7 @@ html {
 
   .hero-badge {
     font-size: 0.7rem;
-    padding: 8px 14px;
+    padding: 6px 12px;
   }
 
   .hero-description {
@@ -825,8 +839,8 @@ html {
   }
 
   .feature-icon {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 
   .feature-icon svg {

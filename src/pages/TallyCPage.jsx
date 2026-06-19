@@ -32,10 +32,8 @@ const TallyCPage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
-          <img src="/assets/images/tallyc.png" alt="Tally Comprehensive Background" />
+          <img src="/assets/images/t.png" alt="Tally Comprehensive Background" />
         </div>
-        
-
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content fade-up">
@@ -378,7 +376,7 @@ const TallyCPage = () => {
         </div>
       </section>
 
-      {/* Who Hires Section */}
+      {/* Who Hires Section - Purple Footer */}
       <section className="hires-section">
         <div className="container">
           <Building2 className="hires-icon" />
@@ -446,7 +444,7 @@ const TallyCPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Purple Footer */}
       <section className="cta-section">
         <div className="container">
           <h2>Ready to Enrol?</h2>
@@ -481,14 +479,14 @@ const TallyCPage = () => {
           margin: auto;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - Pure White Background */
         .hero-section {
           position: relative;
           min-height: 100vh;
           display: flex;
           align-items: center;
           overflow: hidden;
-          background: none;
+          background: #ffffff;
         }
 
         .hero-background {
@@ -503,9 +501,8 @@ const TallyCPage = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
+         
         }
-
-        
 
         .hero-grid {
           display: grid;
@@ -530,11 +527,10 @@ const TallyCPage = () => {
           gap: 10px;
           padding: 12px 22px;
           border-radius: 50px;
-          background: rgba(59, 130, 246, 0.15);
-          border: 1px solid rgba(59, 130, 246, 0.3);
-          color: #60a5fa;
+          background: #dbeafe;
+          border: 1px solid #93c5fd;
+          color: #1e40af;
           font-weight: 600;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
@@ -548,19 +544,19 @@ const TallyCPage = () => {
           font-weight: 800;
           line-height: 1.1;
           margin-top: 25px;
-          color: white;
+          color: #0f172a;
           font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-title span {
           display: block;
-          color: #3b82f6;
+          color: #2563eb;
           font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-description {
           margin-top: 25px;
-          color: #cbd5e1;
+          color: #475569;
           font-size: 1.1rem;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
@@ -579,18 +575,18 @@ const TallyCPage = () => {
           gap: 8px;
           padding: 10px 22px;
           border-radius: 50px;
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           font-weight: 500;
           font-size: 14px;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
         .tag-icon {
           width: 18px;
           height: 18px;
+          color: #2563eb;
         }
 
         .hero-buttons {
@@ -626,13 +622,12 @@ const TallyCPage = () => {
         }
 
         .secondary-btn {
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           padding: 15px 30px;
           border-radius: 14px;
           cursor: pointer;
-          backdrop-filter: blur(10px);
           transition: 0.4s;
           display: flex;
           gap: 10px;
@@ -641,7 +636,7 @@ const TallyCPage = () => {
         }
 
         .secondary-btn:hover {
-          background: rgba(255,255,255,0.15);
+          background: #e2e8f0;
           transform: translateY(-5px);
         }
 
@@ -676,11 +671,13 @@ const TallyCPage = () => {
           box-shadow: 0 20px 50px rgba(0,0,0,0.08);
           transition: 0.4s;
           font-family: "Poppins", sans-serif;
+          border: 1px solid #e2e8f0;
         }
 
         .stat-card:hover {
           transform: translateY(-10px);
-          box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
         }
 
         .stat-card svg {
@@ -707,7 +704,7 @@ const TallyCPage = () => {
         }
 
         .section-header span {
-          color: #3b82f6;
+          color: #2563eb;
           font-weight: 700;
           font-family: "Poppins", sans-serif;
         }
@@ -762,13 +759,13 @@ const TallyCPage = () => {
           flex-shrink: 0;
           width: 48px;
           height: 48px;
-          background: #ffffff;
+          background: #dbeafe;
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #3b82f6;
-          border: 1px solid #e2e8f0;
+          color: #2563eb;
+          border: 1px solid #93c5fd;
           box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
@@ -910,22 +907,23 @@ const TallyCPage = () => {
         .skill-card:hover {
           transform: translateY(-8px);
           border-color: #3b82f6;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .skill-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: white;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .skill-icon {
           width: 32px;
           height: 32px;
-          color: #3b82f6;
+          color: #2563eb;
         }
 
         .skill-card h3 {
@@ -969,16 +967,17 @@ const TallyCPage = () => {
         .feature-showcase-card:hover {
           transform: translateY(-10px);
           border-color: #3b82f6;
-          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .feature-showcase-icon {
           display: inline-flex;
           padding: 16px;
-          background: #f8fafc;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
-          color: #3b82f6;
+          color: #2563eb;
+          border: 1px solid #93c5fd;
         }
 
         .feature-showcase-card h3 {
@@ -995,14 +994,14 @@ const TallyCPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* HIRES */
+        /* HIRES - Purple Footer */
         .hires-section {
           padding: 100px 0;
           background: linear-gradient(
             135deg,
-            #1e3a5f,
-            #0f172a,
-            #1e293b
+            #6d28d9,
+            #4c1d95,
+            #2e1065
           );
           text-align: center;
           color: white;
@@ -1011,7 +1010,7 @@ const TallyCPage = () => {
         .hires-icon {
           width: 64px;
           height: 64px;
-          color: #3b82f6;
+          color: #a78bfa;
           margin-bottom: 20px;
         }
 
@@ -1024,7 +1023,7 @@ const TallyCPage = () => {
 
         .hires-section p {
           font-size: 18px;
-          color: #cbd5e1;
+          color: #ddd6fe;
           max-width: 600px;
           margin: 0 auto 40px;
           font-family: "Poppins", sans-serif;
@@ -1044,22 +1043,23 @@ const TallyCPage = () => {
           justify-content: center;
           gap: 12px;
           padding: 20px;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
+          background: rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.2);
           border-radius: 16px;
           backdrop-filter: blur(10px);
           font-weight: 500;
           font-family: "Poppins", sans-serif;
           transition: all 0.3s;
+          color: white;
         }
 
         .hire-card:hover {
-          background: rgba(255,255,255,0.15);
+          background: rgba(255,255,255,0.2);
           transform: translateY(-5px);
         }
 
         .hire-card svg {
-          color: #3b82f6;
+          color: #a78bfa;
         }
 
         /* BENEFITS */
@@ -1087,20 +1087,21 @@ const TallyCPage = () => {
         .benefit-card:hover {
           transform: translateY(-10px);
           border-color: #3b82f6;
-          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .benefit-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: white;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .benefit-icon {
-          color: #3b82f6;
+          color: #2563eb;
           width: 32px;
           height: 32px;
         }
@@ -1120,14 +1121,15 @@ const TallyCPage = () => {
           line-height: 1.6;
         }
 
-        /* CTA */
+        /* CTA - Purple Footer */
         .cta-section {
           padding: 120px 20px;
           text-align: center;
           background: linear-gradient(
             135deg,
-            #1e3a5f,
-            #0f172a
+            #6d28d9,
+            #4c1d95,
+            #2e1065
           );
           color: white;
         }
@@ -1140,7 +1142,7 @@ const TallyCPage = () => {
         .cta-section p {
           max-width: 700px;
           margin: 25px auto;
-          color: #cbd5e1;
+          color: #ddd6fe;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
         }
@@ -1154,7 +1156,7 @@ const TallyCPage = () => {
         }
 
         .cta-primary {
-          background: linear-gradient(135deg, #3b82f6, #2563eb);
+          background: linear-gradient(135deg, #8b5cf6, #6d28d9);
           color: white;
           border: none;
           padding: 16px 35px;
@@ -1166,16 +1168,16 @@ const TallyCPage = () => {
           align-items: center;
           transition: 0.4s;
           font-family: "Poppins", sans-serif;
-          box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
+          box-shadow: 0 15px 35px rgba(109, 40, 217, 0.4);
         }
 
         .cta-primary:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 45px rgba(59, 130, 246, 0.4);
+          box-shadow: 0 20px 45px rgba(109, 40, 217, 0.5);
         }
 
         .cta-secondary {
-          background: rgba(255,255,255,0.1);
+          background: rgba(255,255,255,0.12);
           border: 1px solid rgba(255,255,255,0.2);
           color: white;
           padding: 16px 35px;
@@ -1195,8 +1197,8 @@ const TallyCPage = () => {
         }
 
         .cta-tertiary {
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.1);
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.15);
           color: white;
           padding: 16px 35px;
           border-radius: 14px;
@@ -1210,14 +1212,14 @@ const TallyCPage = () => {
         }
 
         .cta-tertiary:hover {
-          background: rgba(255,255,255,0.15);
+          background: rgba(255,255,255,0.18);
           transform: translateY(-5px);
         }
 
         .cta-note {
           margin-top: 30px;
           font-size: 14px;
-          color: #94a3b8;
+          color: #c4b5fd;
           font-family: "Poppins", sans-serif;
         }
 
@@ -1279,16 +1281,6 @@ const TallyCPage = () => {
 
           .hero-buttons {
             justify-content: center;
-          }
-
-          .hero-overlay {
-            background: linear-gradient(
-              to bottom,
-              rgba(2, 6, 23, 0.92) 0%,
-              rgba(15, 23, 42, 0.85) 30%,
-              rgba(30, 58, 95, 0.8) 60%,
-              rgba(30, 58, 95, 0.7) 100%
-            );
           }
 
           .section-header h2,

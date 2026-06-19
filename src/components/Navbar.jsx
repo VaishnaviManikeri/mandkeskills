@@ -173,19 +173,19 @@ export default function Navbar() {
 
         /* sky-blue top accent line */
         .accent-bar {
-          height: 3.5px;
+          height: 4px;
           background: linear-gradient(90deg, #0F172A 0%, #38BDF8 40%, #7DD3FC 72%, #0F172A 100%);
         }
 
         .navbar-inner {
-          max-width: 1280px;
+          max-width: 1400px;
           margin: 0 auto;
-          padding: 0 32px;
-          height: 80px;
+          padding: 0 40px;
+          height: 96px;
           display: flex;
           align-items: center;
           justify-content: space-between;
-          gap: 16px;
+          gap: 12px;
         }
 
         /* ── LOGO ── */
@@ -201,8 +201,8 @@ export default function Navbar() {
         }
 
         .logo-img-container {
-          width: 200px;
-          height: 80px;
+          width: 240px;
+          height: 90px;
           overflow: hidden;
           display: flex;
           align-items: center;
@@ -223,16 +223,16 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           justify-content: center;
-          gap: 4px;
+          gap: 2px;
           list-style: none;
           flex: 1;
         }
 
         .nav-link {
           position: relative;
-          padding: 9px 20px;
-          border-radius: 10px;
-          font-size: 14.5px;
+          padding: 10px 18px;
+          border-radius: 12px;
+          font-size: 16px;
           font-weight: 500;
           color: #334155;
           cursor: pointer;
@@ -262,11 +262,11 @@ export default function Navbar() {
         .nav-link.active::after {
           content: '';
           position: absolute;
-          bottom: 3px;
+          bottom: 4px;
           left: 50%;
           transform: translateX(-50%);
           width: 20px;
-          height: 2.5px;
+          height: 3px;
           border-radius: 99px;
           background: #38BDF8;
         }
@@ -281,25 +281,25 @@ export default function Navbar() {
         .apply-btn {
           background: linear-gradient(135deg, #38BDF8, #0EA5E9);
           color: #ffffff;
-          padding: 9px 22px;
-          border-radius: 10px;
-          font-size: 14.5px;
+          padding: 12px 24px;
+          border-radius: 12px;
+          font-size: 15px;
           font-weight: 600;
           border: none;
           cursor: pointer;
           transition: all 0.3s ease;
-          box-shadow: 0 4px 14px rgba(14, 165, 233, 0.3);
+          box-shadow: 0 4px 16px rgba(14, 165, 233, 0.35);
           display: flex;
           align-items: center;
-          gap: 6px;
+          gap: 8px;
           font-family: 'Poppins', sans-serif;
           white-space: nowrap;
           text-decoration: none;
         }
 
         .apply-btn:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(14, 165, 233, 0.4);
+          transform: translateY(-3px);
+          box-shadow: 0 8px 24px rgba(14, 165, 233, 0.45);
           background: linear-gradient(135deg, #0EA5E9, #0284C7);
         }
 
@@ -314,8 +314,8 @@ export default function Navbar() {
         }
 
         .search-toggle-btn {
-          padding: 8px 12px;
-          border-radius: 10px;
+          padding: 10px 12px;
+          border-radius: 12px;
           border: none;
           background: transparent;
           color: #334155;
@@ -348,21 +348,21 @@ export default function Navbar() {
 
         .search-input {
           padding: 10px 16px 10px 40px;
-          border-radius: 10px;
+          border-radius: 12px;
           border: 2px solid #E2E8F0;
           font-size: 14px;
           font-family: 'Inter', sans-serif;
           background: #F8FAFC;
           transition: all 0.3s;
-          width: 220px;
+          width: 240px;
           outline: none;
         }
 
         .search-input:focus {
           border-color: #38BDF8;
           background: #ffffff;
-          box-shadow: 0 0 0 4px rgba(56,189,248,0.1);
-          width: 280px;
+          box-shadow: 0 0 0 4px rgba(56,189,248,0.12);
+          width: 320px;
         }
 
         .search-icon-input {
@@ -384,7 +384,7 @@ export default function Navbar() {
           background: transparent;
           color: #94A3B8;
           cursor: pointer;
-          border-radius: 6px;
+          border-radius: 8px;
           transition: all 0.2s;
           display: flex;
           align-items: center;
@@ -398,23 +398,23 @@ export default function Navbar() {
 
         .search-dropdown {
           position: absolute;
-          top: calc(100% + 8px);
+          top: calc(100% + 10px);
           right: 0;
           background: #ffffff;
           border: 1px solid rgba(56,189,248,0.22);
-          border-radius: 14px;
-          box-shadow: 0 12px 40px rgba(15,23,42,0.12);
-          max-height: 320px;
+          border-radius: 16px;
+          box-shadow: 0 16px 48px rgba(15,23,42,0.14);
+          max-height: 360px;
           overflow-y: auto;
           z-index: 999;
           animation: dropIn 0.2s cubic-bezier(0.4,0,0.2,1) both;
-          min-width: 300px;
+          min-width: 320px;
         }
 
         .search-result-item {
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 14px;
           padding: 12px 16px;
           cursor: pointer;
           transition: background 0.2s;
@@ -475,21 +475,21 @@ export default function Navbar() {
 
         .mega-dropdown {
           position: absolute;
-          top: calc(100% + 12px);
+          top: calc(100% + 14px);
           left: 50%;
           transform: translateX(-50%);
-          width: min(920px, 96vw);
+          width: min(1000px, 96vw);
           background: #ffffff;
           border: 1px solid rgba(56,189,248,0.22);
-          border-radius: 20px;
+          border-radius: 24px;
           padding: 28px;
-          box-shadow: 0 20px 60px rgba(15,23,42,0.14), 0 4px 16px rgba(56,189,248,0.1);
+          box-shadow: 0 24px 64px rgba(15,23,42,0.14), 0 4px 16px rgba(56,189,248,0.1);
           z-index: 999;
           animation: dropIn 0.2s cubic-bezier(0.4,0,0.2,1) both;
         }
 
         @keyframes dropIn {
-          from { opacity: 0; transform: translateX(-50%) translateY(-8px); }
+          from { opacity: 0; transform: translateX(-50%) translateY(-10px); }
           to   { opacity: 1; transform: translateX(-50%) translateY(0); }
         }
 
@@ -506,7 +506,7 @@ export default function Navbar() {
           font-size: 11px;
           font-weight: 700;
           color: #38BDF8;
-          letter-spacing: 1.6px;
+          letter-spacing: 1.8px;
           text-transform: uppercase;
         }
 
@@ -528,7 +528,7 @@ export default function Navbar() {
           border-radius: 14px;
           padding: 16px 14px;
           cursor: pointer;
-          transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
+          transition: all 0.25s cubic-bezier(0.4,0,0.2,1);
           display: flex;
           flex-direction: column;
           gap: 8px;
@@ -538,17 +538,17 @@ export default function Navbar() {
         .course-card:hover {
           background: #F0F9FF;
           border-color: #7DD3FC;
-          transform: translateY(-3px);
-          box-shadow: 0 8px 24px rgba(56,189,248,0.15);
+          transform: translateY(-4px);
+          box-shadow: 0 8px 28px rgba(56,189,248,0.15);
         }
 
         .course-icon { font-size: 22px; line-height: 1; }
 
         .course-tag {
           display: inline-flex;
-          padding: 2px 8px;
+          padding: 2px 10px;
           border-radius: 99px;
-          font-size: 9.5px;
+          font-size: 10px;
           font-weight: 600;
           letter-spacing: 0.7px;
           text-transform: uppercase;
@@ -559,7 +559,7 @@ export default function Navbar() {
         }
 
         .course-name {
-          font-size: 12.5px;
+          font-size: 13px;
           font-weight: 600;
           color: #1E293B;
           line-height: 1.4;
@@ -577,7 +577,7 @@ export default function Navbar() {
 
         .course-card:hover .course-arrow {
           color: #38BDF8;
-          transform: translateX(3px);
+          transform: translateX(4px);
         }
 
         .dropdown-footer {
@@ -590,7 +590,7 @@ export default function Navbar() {
         }
 
         .dropdown-footer-text {
-          font-size: 11.5px;
+          font-size: 12px;
           color: #94A3B8;
           font-family: 'Inter', sans-serif;
         }
@@ -599,11 +599,11 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           gap: 6px;
-          padding: 7px 16px;
-          border-radius: 8px;
+          padding: 8px 18px;
+          border-radius: 10px;
           border: 1.5px solid #38BDF8;
           color: #0284C7;
-          font-size: 12.5px;
+          font-size: 13px;
           font-weight: 600;
           font-family: 'Poppins', sans-serif;
           cursor: pointer;
@@ -623,7 +623,7 @@ export default function Navbar() {
           gap: 5px;
           cursor: pointer;
           padding: 8px;
-          border-radius: 10px;
+          border-radius: 12px;
           background: #F0F9FF;
           border: 1px solid rgba(56,189,248,0.25);
           transition: background 0.2s;
@@ -632,22 +632,22 @@ export default function Navbar() {
         .hamburger:hover { background: #E0F2FE; }
 
         .ham-line {
-          width: 22px;
-          height: 2px;
+          width: 24px;
+          height: 2.5px;
           border-radius: 99px;
           background: #0F172A;
           transition: all 0.3s cubic-bezier(0.4,0,0.2,1);
           transform-origin: center;
         }
 
-        .hamburger.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open .ham-line:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
         .hamburger.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
-        .hamburger.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .hamburger.open .ham-line:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
 
         /* ── MOBILE MENU ── */
         .mobile-menu {
           position: fixed;
-          top: 83px;
+          top: 100px;
           left: 0;
           right: 0;
           bottom: 0;
@@ -660,7 +660,7 @@ export default function Navbar() {
         }
 
         @keyframes slideDown {
-          from { opacity: 0; transform: translateY(-8px); }
+          from { opacity: 0; transform: translateY(-10px); }
           to   { opacity: 1; transform: translateY(0); }
         }
 
@@ -668,8 +668,8 @@ export default function Navbar() {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 13px 16px;
-          border-radius: 12px;
+          padding: 14px 16px;
+          border-radius: 14px;
           margin-bottom: 6px;
           color: #334155;
           font-size: 15px;
@@ -696,7 +696,7 @@ export default function Navbar() {
         .mobile-icon-wrap {
           width: 36px;
           height: 36px;
-          border-radius: 10px;
+          border-radius: 12px;
           background: #E0F2FE;
           display: flex;
           align-items: center;
@@ -709,7 +709,7 @@ export default function Navbar() {
           border: 1px solid #E2E8F0;
           border-radius: 14px;
           padding: 10px;
-          margin-bottom: 8px;
+          margin-bottom: 6px;
         }
 
         .mobile-course-item {
@@ -736,13 +736,13 @@ export default function Navbar() {
         .mobile-divider {
           height: 1px;
           background: #E2E8F0;
-          margin: 12px 0;
+          margin: 14px 0;
         }
 
         .mobile-cta {
           width: 100%;
           padding: 14px;
-          border-radius: 12px;
+          border-radius: 14px;
           border: none;
           background: linear-gradient(135deg, #38BDF8 0%, #0EA5E9 100%);
           color: #fff;
@@ -750,7 +750,7 @@ export default function Navbar() {
           font-weight: 700;
           font-family: 'Poppins', sans-serif;
           cursor: pointer;
-          box-shadow: 0 4px 18px rgba(14,165,233,0.3);
+          box-shadow: 0 4px 20px rgba(14,165,233,0.35);
           text-decoration: none;
           display: block;
           text-align: center;
@@ -758,69 +758,100 @@ export default function Navbar() {
 
         /* Mobile search */
         .mobile-search-wrapper {
-          margin-bottom: 12px;
+          margin-bottom: 14px;
           position: relative;
         }
 
         .mobile-search-wrapper .search-input {
           width: 100%;
           padding: 12px 16px 12px 40px;
+          font-size: 14px;
         }
 
         /* ── RESPONSIVE BREAKPOINTS ── */
         
-        /* Large screens (desktop) - keep logo large */
-        @media (min-width: 1281px) {
+        /* Large screens (desktop) */
+        @media (min-width: 1401px) {
           .navbar-inner {
-            max-width: 1400px;
-            padding: 0 48px;
-            height: 88px;
+            max-width: 1600px;
+            padding: 0 56px;
+            height: 105px;
           }
           
           .nav-link {
-            font-size: 16px;
-            padding: 10px 24px;
+            font-size: 17px;
+            padding: 10px 20px;
           }
           
           .logo-img-container {
-            width: 220px;
-            height: 88px;
+            width: 260px;
+            height: 96px;
           }
 
           .search-input {
-            width: 240px;
+            width: 260px;
             font-size: 15px;
           }
 
           .search-input:focus {
-            width: 320px;
+            width: 360px;
           }
         }
 
         /* Tablets and smaller laptops */
-        @media (max-width: 1280px) {
+        @media (max-width: 1400px) {
           .navbar-inner {
-            padding: 0 24px;
-            height: 76px;
+            padding: 0 32px;
+            height: 90px;
           }
           
           .nav-link {
-            font-size: 13.5px;
+            font-size: 15px;
             padding: 8px 14px;
+          }
+          
+          .logo-img-container {
+            width: 200px;
+            height: 80px;
+          }
+
+          .search-input {
+            width: 200px;
+            font-size: 14px;
+          }
+
+          .search-input:focus {
+            width: 260px;
+          }
+        }
+
+        @media (max-width: 1200px) {
+          .nav-link {
+            font-size: 14px;
+            padding: 8px 12px;
+          }
+          
+          .navbar-inner {
+            padding: 0 24px;
+            height: 85px;
           }
           
           .logo-img-container {
             width: 180px;
             height: 72px;
           }
-
+          
           .search-input {
-            width: 180px;
-            font-size: 13px;
+            width: 170px;
           }
-
+          
           .search-input:focus {
-            width: 220px;
+            width: 210px;
+          }
+          
+          .apply-btn {
+            padding: 10px 18px;
+            font-size: 14px;
           }
         }
 
@@ -837,11 +868,11 @@ export default function Navbar() {
           
           .navbar-inner { 
             padding: 0 20px; 
-            height: 74px; 
+            height: 80px; 
           }
           
           .mobile-menu { 
-            top: 77px; 
+            top: 84px; 
           }
           
           .logo-img-container {
@@ -863,11 +894,11 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .navbar-inner {
             padding: 0 16px;
-            height: 70px;
+            height: 74px;
           }
           
           .mobile-menu {
-            top: 73px;
+            top: 78px;
             padding: 16px 14px;
           }
           
@@ -897,29 +928,34 @@ export default function Navbar() {
             width: 100%;
             justify-content: center;
           }
+          
+          .mobile-nav-item {
+            padding: 12px 14px;
+            font-size: 14px;
+          }
         }
 
         /* Small phones */
         @media (max-width: 576px) {
           .navbar-inner {
             padding: 0 12px;
-            height: 64px;
+            height: 68px;
           }
           
           .mobile-menu {
-            top: 67px;
+            top: 72px;
             padding: 14px 12px;
           }
           
           .logo-img-container {
-            width: 110px;
+            width: 120px;
             height: 48px;
           }
           
           .mega-dropdown {
             padding: 14px;
-            top: calc(100% + 6px);
-            border-radius: 14px;
+            top: calc(100% + 8px);
+            border-radius: 16px;
           }
           
           .courses-grid {
@@ -932,13 +968,13 @@ export default function Navbar() {
           }
           
           .mobile-nav-item {
-            padding: 11px 14px;
-            font-size: 14px;
+            padding: 10px 12px;
+            font-size: 13px;
           }
           
           .mobile-course-item {
             padding: 10px 12px;
-            font-size: 12.5px;
+            font-size: 13px;
           }
           
           .mobile-cta {
@@ -958,28 +994,33 @@ export default function Navbar() {
           
           .hamburger.open .ham-line:nth-child(1) { transform: translateY(6px) rotate(45deg); }
           .hamburger.open .ham-line:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+          
+          .mobile-search-wrapper .search-input {
+            padding: 10px 14px 10px 36px;
+            font-size: 13px;
+          }
         }
 
         /* Extra small devices */
         @media (max-width: 400px) {
           .navbar-inner {
             padding: 0 10px;
-            height: 58px;
+            height: 62px;
           }
           
           .logo-img-container {
-            width: 90px;
-            height: 40px;
+            width: 100px;
+            height: 42px;
           }
           
           .mobile-menu {
-            top: 61px;
+            top: 66px;
             padding: 12px 10px;
           }
           
           .mobile-nav-item {
-            padding: 9px 12px;
-            font-size: 13px;
+            padding: 8px 10px;
+            font-size: 12px;
           }
           
           .mobile-course-item {
@@ -1009,12 +1050,12 @@ export default function Navbar() {
         /* Landscape phones */
         @media (max-height: 500px) and (orientation: landscape) {
           .mobile-menu {
-            padding: 10px 16px;
-            top: 70px;
+            padding: 10px 14px;
+            top: 76px;
           }
           
           .mobile-nav-item {
-            padding: 6px 12px;
+            padding: 6px 10px;
             font-size: 13px;
           }
           
@@ -1029,7 +1070,7 @@ export default function Navbar() {
           }
           
           .mobile-search-wrapper .search-input {
-            padding: 8px 16px 8px 36px;
+            padding: 8px 14px 8px 36px;
             font-size: 13px;
           }
           
@@ -1040,30 +1081,35 @@ export default function Navbar() {
         }
 
         /* 4K screens */
-        @media (min-width: 2000px) {
+        @media (min-width: 2200px) {
           .navbar-inner {
-            max-width: 1600px;
-            padding: 0 64px;
-            height: 100px;
+            max-width: 1800px;
+            padding: 0 80px;
+            height: 120px;
           }
           
           .nav-link {
-            font-size: 18px;
-            padding: 12px 28px;
+            font-size: 20px;
+            padding: 12px 24px;
           }
           
           .logo-img-container {
-            width: 260px;
-            height: 100px;
+            width: 300px;
+            height: 110px;
           }
 
           .search-input {
-            width: 280px;
-            font-size: 16px;
+            width: 300px;
+            font-size: 17px;
           }
 
           .search-input:focus {
-            width: 380px;
+            width: 420px;
+          }
+          
+          .apply-btn {
+            font-size: 17px;
+            padding: 14px 32px;
           }
         }
       `}</style>
@@ -1087,7 +1133,7 @@ export default function Navbar() {
                 className={`nav-link ${activePage === "Home" ? "active" : ""}`}
                 onClick={() => setCoursesOpen(false)}
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                   <polyline points="9 22 9 12 15 12 15 22"/>
                 </svg>
@@ -1101,7 +1147,7 @@ export default function Navbar() {
                 className={`nav-link ${activePage === "About" ? "active" : ""}`}
                 onClick={() => setCoursesOpen(false)}
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <circle cx="12" cy="12" r="10"/>
                   <line x1="12" y1="16" x2="12" y2="12"/>
                   <line x1="12" y1="8" x2="12.01" y2="8"/>
@@ -1116,12 +1162,12 @@ export default function Navbar() {
                 className={`nav-link ${activePage === "Courses" ? "active" : ""}`}
                 onClick={() => { setCoursesOpen((o) => !o); }}
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
                   <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
                 </svg>
                 Courses
-                <svg className={`chevron ${coursesOpen ? "open" : ""}`} width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <svg className={`chevron ${coursesOpen ? "open" : ""}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                   <polyline points="6 9 12 15 18 9"/>
                 </svg>
               </button>
@@ -1154,7 +1200,7 @@ export default function Navbar() {
                     <div className="dropdown-footer">
                       <span className="dropdown-footer-text">Certified · Industry-Ready · Career-Focused</span>
                       <Link to="/courses" className="view-all-btn" onClick={() => setCoursesOpen(false)}>
-                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
                         </svg>
                         Browse All
@@ -1171,7 +1217,7 @@ export default function Navbar() {
                 className={`nav-link ${activePage === "Contact" ? "active" : ""}`}
                 onClick={() => setCoursesOpen(false)}
               >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                 </svg>
                 Contact
@@ -1331,7 +1377,7 @@ export default function Navbar() {
               <div className="mobile-icon-wrap">📚</div>
               <span>Courses</span>
             </div>
-            <svg className={`chevron ${mobileCoursesOpen ? "open" : ""}`} width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg className={`chevron ${mobileCoursesOpen ? "open" : ""}`} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0EA5E9" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="6 9 12 15 18 9"/>
             </svg>
           </div>

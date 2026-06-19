@@ -84,7 +84,7 @@ const Footer = () => {
         }
 
         .footer {
-          background: #ffffff;
+          background: #1c96c5;
           padding: 60px 0 0 0;
           font-family: "Poppins", sans-serif;
           border-top: 1px solid #e8f0fe;
@@ -116,7 +116,7 @@ const Footer = () => {
         .footer-title {
           font-size: 1.2rem;
           font-weight: 700;
-          color: #0284c7;
+          color: #ffffff;
           font-family: "Times New Roman", Times, serif;
           margin-bottom: 5px;
         }
@@ -124,7 +124,7 @@ const Footer = () => {
         .footer-subtitle {
           font-size: 1rem;
           font-weight: 700;
-          color: #0284c7;
+          color: #ffffff;
           font-family: "Times New Roman", Times, serif;
           letter-spacing: 1px;
           margin-bottom: 5px;
@@ -144,7 +144,7 @@ const Footer = () => {
         }
 
         .info-icon {
-          color: #0284c7;
+          color: #ffffff;
           flex-shrink: 0;
           font-size: 1.1rem;
           margin-top: 2px;
@@ -152,7 +152,7 @@ const Footer = () => {
         }
 
         .info-item p {
-          color: #0284c7;
+          color: #ffffff;
           font-size: 0.9rem;
           line-height: 1.6;
           font-family: "Poppins", sans-serif;
@@ -175,7 +175,7 @@ const Footer = () => {
         }
 
         .footer-links li a {
-          color: #0284c7;
+          color: #ffffff;
           text-decoration: none;
           font-size: 0.9rem;
           font-family: "Poppins", sans-serif;
@@ -210,7 +210,7 @@ const Footer = () => {
         }
 
         .newsletter-text {
-          color: #0284c7;
+          color: #ffffff;
           font-size: 0.9rem;
           font-family: "Poppins", sans-serif;
           margin: 0;
@@ -229,8 +229,8 @@ const Footer = () => {
           border-radius: 10px;
           font-size: 0.9rem;
           font-family: "Poppins", sans-serif;
-          color: #0c4a6e;
-          background: #f8faff;
+          color: #ffffff;
+          background: #ffffff;
           transition: all 0.3s ease;
           width: 100%;
           outline: none;
@@ -248,8 +248,8 @@ const Footer = () => {
         }
 
         .newsletter-btn {
-          background: #1e3a5f;
-          color: #ffffff;
+          background: #e4eef2;
+          color: #1c96c5;
           border: none;
           padding: 12px 24px;
           border-radius: 10px;
@@ -266,7 +266,7 @@ const Footer = () => {
         }
 
         .newsletter-btn:hover {
-          background: #0c4a6e;
+          background: #ffffff;
           transform: translateY(-2px);
           box-shadow: 0 10px 25px rgba(30, 58, 95, 0.3);
         }
@@ -298,7 +298,7 @@ const Footer = () => {
         }
 
         .copyright {
-          color: #0284c7;
+          color: #ffffff;
           font-size: 0.85rem;
           font-family: "Poppins", sans-serif;
           margin: 0;

@@ -18,8 +18,8 @@ import {
   Phone,
   MapPin,
   Shield,
-  List,
-  Info
+  Sparkles,
+  ArrowRight
 } from 'lucide-react';
 
 const EximPage = () => {
@@ -27,15 +27,14 @@ const EximPage = () => {
     <div className="exim-page">
       {/* Hero Section */}
       <section className="hero-section">
-        <div className="hero-overlay"></div>
         <div className="hero-background">
-          <img src="/assets/images/exim.png" alt="EXIM Trade Background" />
+          <img src="/assets/images/e3.png" alt="EXIM Trade Background" />
         </div>
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content fade-up">
               <span className="hero-badge">
-                <Globe className="inline-icon" /> MILES EXIM
+                <Sparkles size={18} /> MILES EXIM
               </span>
               <h1 className="hero-title">
                 A to Z of
@@ -46,13 +45,13 @@ const EximPage = () => {
               </p>
               <div className="hero-tags">
                 <span className="tag">
-                  <Target className="tag-icon" /> Practical
+                  <Target size={18} /> Practical
                 </span>
                 <span className="tag">
-                  <FileText className="tag-icon" /> Trade & Customs
+                  <FileText size={18} /> Trade & Customs
                 </span>
                 <span className="tag">
-                  <Briefcase className="tag-icon" /> Job Ready
+                  <Briefcase size={18} /> Job Ready
                 </span>
               </div>
               <div className="hero-buttons">
@@ -213,10 +212,14 @@ const EximPage = () => {
               'Payment Terms & Methods'
             ].map((item, index) => (
               <div key={index} className="course-card">
-                <CheckCircle size={32} />
+                <div className="course-icon-wrapper">
+                  <CheckCircle size={32} />
+                </div>
                 <h3>{item}</h3>
                 <p>In-depth coverage of {item.toLowerCase()} with practical examples</p>
-                <button>Learn More →</button>
+                <button className="course-link">
+                  Learn More <ArrowRight size={16} />
+                </button>
               </div>
             ))}
           </div>
@@ -337,7 +340,7 @@ const EximPage = () => {
           display: flex;
           align-items: center;
           overflow: hidden;
-          background: #020617;
+          background: #ffffff;
         }
 
         .hero-background {
@@ -352,21 +355,9 @@ const EximPage = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          opacity: 0.3;
         }
 
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            to right,
-            rgba(2, 6, 23, 0.95) 0%,
-            rgba(2, 6, 23, 0.7) 40%,
-            rgba(2, 6, 23, 0.3) 70%,
-            rgba(2, 6, 23, 0.1) 100%
-          );
-          z-index: 1;
-        }
+     
 
         .hero-grid {
           display: grid;
@@ -389,20 +380,18 @@ const EximPage = () => {
           display: inline-flex;
           align-items: center;
           gap: 10px;
-          padding: 12px 22px;
+          padding: 10px 22px;
           border-radius: 50px;
-          background: rgba(249, 115, 22, 0.15);
-          border: 1px solid rgba(249, 115, 22, 0.3);
-          color: #fb923c;
+          background: #e0f2fe;
+          border: 1px solid #7dd3fc;
+          color: #0369a1;
           font-weight: 600;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
           font-size: 0.9rem;
         }
 
-        .inline-icon {
-          width: 20px;
-          height: 20px;
+        .hero-badge svg {
+          color: #0ea5e9;
         }
 
         .hero-title {
@@ -410,19 +399,19 @@ const EximPage = () => {
           font-weight: 800;
           line-height: 1.1;
           margin-top: 25px;
-          color: white;
+          color: #0f172a;
           font-family: "Times New Roman", Times, serif;
         }
 
         .hero-title span {
           display: block;
-          color: #f97316;
+          color: #0ea5e9;
           font-family: "Times New Roman", Times, serif;
         }
 
         .hero-description {
           margin-top: 25px;
-          color: #cbd5e1;
+          color: #475569;
           font-size: 1.1rem;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
@@ -441,18 +430,16 @@ const EximPage = () => {
           gap: 8px;
           padding: 10px 22px;
           border-radius: 50px;
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           font-weight: 500;
           font-size: 0.9rem;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
-        .tag-icon {
-          width: 18px;
-          height: 18px;
+        .tag svg {
+          color: #0ea5e9;
         }
 
         .hero-buttons {
@@ -463,11 +450,7 @@ const EximPage = () => {
         }
 
         .primary-btn {
-          background: linear-gradient(
-            135deg,
-            #f97316,
-            #ea580c
-          );
+          background: #0ea5e9;
           color: white;
           border: none;
           padding: 15px 30px;
@@ -477,26 +460,26 @@ const EximPage = () => {
           display: inline-flex;
           gap: 10px;
           align-items: center;
-          transition: all 0.4s ease;
-          box-shadow: 0 15px 35px rgba(249, 115, 22, 0.35);
+          transition: all 0.3s ease;
+          box-shadow: 0 15px 35px rgba(14, 165, 233, 0.3);
           font-family: "Poppins", sans-serif;
           font-size: 1rem;
         }
 
         .primary-btn:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 45px rgba(249, 115, 22, 0.45);
+          box-shadow: 0 20px 45px rgba(14, 165, 233, 0.4);
+          background: #0284c7;
         }
 
         .secondary-btn {
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           padding: 15px 30px;
           border-radius: 14px;
           cursor: pointer;
-          backdrop-filter: blur(10px);
-          transition: all 0.4s;
+          transition: all 0.3s;
           display: inline-flex;
           gap: 10px;
           align-items: center;
@@ -505,8 +488,9 @@ const EximPage = () => {
         }
 
         .secondary-btn:hover {
-          background: rgba(255,255,255,0.15);
+          background: #e2e8f0;
           transform: translateY(-5px);
+          border-color: #0ea5e9;
         }
 
         /* FADE UP */
@@ -538,18 +522,20 @@ const EximPage = () => {
           padding: 35px 20px;
           border-radius: 24px;
           text-align: center;
-          box-shadow: 0 20px 50px rgba(0,0,0,0.08);
-          transition: all 0.4s;
+          box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+          border: 1px solid #f1f5f9;
+          transition: all 0.3s;
           font-family: "Poppins", sans-serif;
         }
 
         .stat-card:hover {
           transform: translateY(-10px);
-          box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+          box-shadow: 0 20px 50px rgba(14, 165, 233, 0.1);
+          border-color: #7dd3fc;
         }
 
         .stat-card svg {
-          color: #f97316;
+          color: #0ea5e9;
         }
 
         .stat-card h3 {
@@ -557,12 +543,14 @@ const EximPage = () => {
           margin-top: 15px;
           color: #0f172a;
           font-family: "Times New Roman", Times, serif;
+          font-weight: 800;
         }
 
         .stat-card p {
           color: #64748b;
           font-family: "Poppins", sans-serif;
           font-size: 0.95rem;
+          font-weight: 500;
         }
 
         /* SECTION HEADER */
@@ -573,10 +561,10 @@ const EximPage = () => {
         }
 
         .section-header span {
-          color: #f97316;
+          color: #0ea5e9;
           font-weight: 700;
-          font-size: 0.9rem;
-          letter-spacing: 1px;
+          font-size: 0.85rem;
+          letter-spacing: 1.5px;
           text-transform: uppercase;
           font-family: "Poppins", sans-serif;
         }
@@ -586,11 +574,12 @@ const EximPage = () => {
           margin-top: 15px;
           color: #0f172a;
           font-family: "Times New Roman", Times, serif;
+          font-weight: 800;
         }
 
         .section-header p {
           margin-top: 20px;
-          color: #64748b;
+          color: #475569;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
           font-size: 1rem;
@@ -599,16 +588,17 @@ const EximPage = () => {
         /* ABOUT - LIST STYLES */
         .about-section {
           padding: 80px 0 120px;
-          background: #ffffff;
+          background: #fafcff;
         }
 
         .course-details-list {
           max-width: 900px;
           margin: 60px auto 0;
-          background: #f8fafc;
+          background: #ffffff;
           border-radius: 24px;
           padding: 40px;
-          border: 1px solid #e2e8f0;
+          border: 1px solid #f1f5f9;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
         }
 
         .detail-item {
@@ -616,7 +606,7 @@ const EximPage = () => {
           align-items: flex-start;
           gap: 20px;
           padding: 18px 0;
-          border-bottom: 1px solid #e2e8f0;
+          border-bottom: 1px solid #f1f5f9;
           transition: all 0.3s;
         }
 
@@ -632,14 +622,12 @@ const EximPage = () => {
           flex-shrink: 0;
           width: 48px;
           height: 48px;
-          background: #ffffff;
+          background: #e0f2fe;
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #f97316;
-          border: 1px solid #e2e8f0;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+          color: #0ea5e9;
         }
 
         .detail-content {
@@ -665,7 +653,7 @@ const EximPage = () => {
         /* COURSES */
         .courses-section {
           padding: 120px 0;
-          background: #f8fafc;
+          background: #ffffff;
         }
 
         .courses-grid {
@@ -676,27 +664,35 @@ const EximPage = () => {
         }
 
         .course-card {
-          background: white;
+          background: #ffffff;
           padding: 35px 30px;
           border-radius: 24px;
-          transition: all 0.4s;
-          box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+          transition: all 0.3s;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+          border: 1px solid #f1f5f9;
           font-family: "Poppins", sans-serif;
-          border: 1px solid #e2e8f0;
         }
 
         .course-card:hover {
           transform: translateY(-12px);
-          box-shadow: 0 25px 60px rgba(0,0,0,0.1);
-          border-color: #f97316;
+          box-shadow: 0 20px 50px rgba(14, 165, 233, 0.08);
+          border-color: #7dd3fc;
         }
 
-        .course-card svg {
-          color: #f97316;
+        .course-icon-wrapper {
+          width: 60px;
+          height: 60px;
+          background: #e0f2fe;
+          border-radius: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #0ea5e9;
+          margin-bottom: 16px;
         }
 
         .course-card h3 {
-          margin: 20px 0 10px;
+          margin: 0 0 10px;
           color: #0f172a;
           font-size: 1.2rem;
           font-family: "Times New Roman", Times, serif;
@@ -710,11 +706,11 @@ const EximPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        .course-card button {
+        .course-link {
           margin-top: 20px;
           border: none;
           background: transparent;
-          color: #2563eb;
+          color: #0ea5e9;
           font-weight: 600;
           display: inline-flex;
           align-items: center;
@@ -725,15 +721,15 @@ const EximPage = () => {
           transition: all 0.3s;
         }
 
-        .course-card button:hover {
-          color: #f97316;
-          gap: 12px;
+        .course-link:hover {
+          color: #0284c7;
+          gap: 14px;
         }
 
         /* SKILLS */
         .skills-section {
           padding: 120px 0;
-          background: white;
+          background: #fafcff;
         }
 
         .skills-grid {
@@ -744,34 +740,34 @@ const EximPage = () => {
         }
 
         .skill-card {
-          background: #f8fafc;
+          background: #ffffff;
           border-radius: 20px;
           padding: 36px 24px;
           text-align: center;
-          transition: all 0.4s;
-          border: 1px solid #e2e8f0;
+          transition: all 0.3s;
+          border: 1px solid #f1f5f9;
+          box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
           font-family: "Poppins", sans-serif;
         }
 
         .skill-card:hover {
           transform: translateY(-8px);
-          border-color: #f97316;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          border-color: #7dd3fc;
+          box-shadow: 0 20px 40px rgba(14, 165, 233, 0.08);
         }
 
         .skill-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: white;
+          background: #e0f2fe;
           border-radius: 16px;
           margin-bottom: 20px;
-          box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
         .skill-icon {
           width: 32px;
           height: 32px;
-          color: #f97316;
+          color: #0ea5e9;
         }
 
         .skill-card h3 {
@@ -793,33 +789,58 @@ const EximPage = () => {
         /* HIRES */
         .hires-section {
           padding: 100px 0;
-          background: linear-gradient(
-            135deg,
-            #020617,
-            #0f172a,
-            #172554
-          );
+          background: linear-gradient(135deg, #0f172a, #1e293b);
           text-align: center;
           color: white;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .hires-section::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          right: -20%;
+          width: 500px;
+          height: 500px;
+          background: radial-gradient(circle, rgba(14, 165, 233, 0.08), transparent 70%);
+          border-radius: 50%;
+        }
+
+        .hires-section::after {
+          content: '';
+          position: absolute;
+          bottom: -30%;
+          left: -10%;
+          width: 400px;
+          height: 400px;
+          background: radial-gradient(circle, rgba(56, 189, 248, 0.06), transparent 70%);
+          border-radius: 50%;
+        }
+
+        .hires-section .container {
+          position: relative;
+          z-index: 2;
         }
 
         .hires-icon {
           width: 64px;
           height: 64px;
-          color: #f97316;
+          color: #0ea5e9;
           margin-bottom: 20px;
         }
 
         .hires-section h2 {
-          font-size: 2.5rem;
+          font-size: 2.8rem;
           font-weight: 700;
           margin-bottom: 16px;
           font-family: "Times New Roman", Times, serif;
+          color: #ffffff;
         }
 
         .hires-section p {
           font-size: 1.1rem;
-          color: #cbd5e1;
+          color: #94a3b8;
           max-width: 600px;
           margin: 0 auto 40px;
           font-family: "Poppins", sans-serif;
@@ -829,7 +850,7 @@ const EximPage = () => {
           display: grid;
           grid-template-columns: repeat(3, 1fr);
           gap: 30px;
-          max-width: 600px;
+          max-width: 700px;
           margin: 0 auto;
         }
 
@@ -838,46 +859,45 @@ const EximPage = () => {
           align-items: center;
           justify-content: center;
           gap: 12px;
-          padding: 20px;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
+          padding: 22px;
+          background: rgba(255,255,255,0.06);
+          border: 1px solid rgba(255,255,255,0.1);
           border-radius: 16px;
-          backdrop-filter: blur(10px);
           font-weight: 500;
           font-family: "Poppins", sans-serif;
+          color: #e2e8f0;
           transition: all 0.3s;
         }
 
         .hire-card:hover {
-          background: rgba(255,255,255,0.15);
+          background: rgba(255,255,255,0.12);
           transform: translateY(-5px);
+          border-color: #0ea5e9;
         }
 
         .hire-card svg {
-          color: #f97316;
+          color: #0ea5e9;
         }
 
         /* CTA */
         .cta-section {
           padding: 120px 20px;
           text-align: center;
-          background: linear-gradient(
-            135deg,
-            #172554,
-            #020617
-          );
-          color: white;
+          background: #ffffff;
+          border-top: 1px solid #f1f5f9;
+          color: #0f172a;
         }
 
         .cta-section h2 {
           font-size: 3.5rem;
           font-family: "Times New Roman", Times, serif;
+          font-weight: 800;
         }
 
         .cta-section p {
           max-width: 700px;
           margin: 25px auto;
-          color: #cbd5e1;
+          color: #475569;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
           font-size: 1.1rem;
@@ -892,7 +912,7 @@ const EximPage = () => {
         }
 
         .cta-primary {
-          background: linear-gradient(135deg, #f97316, #ea580c);
+          background: #0ea5e9;
           color: white;
           border: none;
           padding: 16px 35px;
@@ -902,21 +922,22 @@ const EximPage = () => {
           display: inline-flex;
           gap: 10px;
           align-items: center;
-          transition: all 0.4s;
+          transition: all 0.3s;
           font-family: "Poppins", sans-serif;
-          box-shadow: 0 15px 35px rgba(249, 115, 22, 0.3);
+          box-shadow: 0 10px 30px rgba(14, 165, 233, 0.25);
           font-size: 1rem;
         }
 
         .cta-primary:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 45px rgba(249, 115, 22, 0.4);
+          box-shadow: 0 15px 40px rgba(14, 165, 233, 0.35);
+          background: #0284c7;
         }
 
         .cta-secondary {
-          background: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.2);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           padding: 16px 35px;
           border-radius: 14px;
           font-weight: 600;
@@ -924,20 +945,21 @@ const EximPage = () => {
           display: inline-flex;
           gap: 10px;
           align-items: center;
-          transition: all 0.4s;
+          transition: all 0.3s;
           font-family: "Poppins", sans-serif;
           font-size: 1rem;
         }
 
         .cta-secondary:hover {
-          background: rgba(255,255,255,0.2);
+          background: #e2e8f0;
           transform: translateY(-5px);
+          border-color: #0ea5e9;
         }
 
         .cta-tertiary {
-          background: rgba(255,255,255,0.05);
-          border: 1px solid rgba(255,255,255,0.1);
-          color: white;
+          background: #f8fafc;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           padding: 16px 35px;
           border-radius: 14px;
           font-weight: 600;
@@ -945,14 +967,15 @@ const EximPage = () => {
           display: inline-flex;
           gap: 10px;
           align-items: center;
-          transition: all 0.4s;
+          transition: all 0.3s;
           font-family: "Poppins", sans-serif;
           font-size: 1rem;
         }
 
         .cta-tertiary:hover {
-          background: rgba(255,255,255,0.15);
+          background: #e2e8f0;
           transform: translateY(-5px);
+          border-color: #0ea5e9;
         }
 
         .cta-note {
@@ -964,7 +987,6 @@ const EximPage = () => {
 
         /* ========== RESPONSIVE DESIGN ========== */
 
-        /* Tablets & Small Laptops */
         @media (max-width: 1024px) {
           .hero-grid {
             grid-template-columns: 1fr 1fr;
@@ -999,9 +1021,12 @@ const EximPage = () => {
           .course-details-list {
             padding: 30px 24px;
           }
+
+          .hires-grid {
+            grid-template-columns: repeat(3, 1fr);
+          }
         }
 
-        /* Mobile Landscape & Tablets */
         @media (max-width: 768px) {
           .hero-section {
             min-height: 80vh;
@@ -1030,18 +1055,10 @@ const EximPage = () => {
             justify-content: center;
           }
 
-          .hero-overlay {
-            background: linear-gradient(
-              to bottom,
-              rgba(2, 6, 23, 0.95) 0%,
-              rgba(2, 6, 23, 0.8) 50%,
-              rgba(2, 6, 23, 0.6) 100%
-            );
-          }
-
           .hero-badge {
             font-size: 0.8rem;
-            padding: 10px 18px;
+            padding: 8px 18px;
+            margin: 0 auto;
           }
 
           .hero-description {
@@ -1188,7 +1205,7 @@ const EximPage = () => {
           }
 
           .cta-section h2 {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
           }
 
           .cta-section p {
@@ -1210,7 +1227,6 @@ const EximPage = () => {
           }
         }
 
-        /* Mobile Phones */
         @media (max-width: 480px) {
           .container {
             width: 95%;
@@ -1218,7 +1234,7 @@ const EximPage = () => {
           }
 
           .hero-section {
-            min-height: 70vh;
+            min-height: 60vh;
           }
 
           .hero-grid {
@@ -1235,7 +1251,7 @@ const EximPage = () => {
 
           .hero-badge {
             font-size: 0.7rem;
-            padding: 8px 14px;
+            padding: 6px 14px;
           }
 
           .hero-description {
@@ -1245,11 +1261,6 @@ const EximPage = () => {
           .tag {
             font-size: 0.7rem;
             padding: 6px 14px;
-          }
-
-          .tag-icon {
-            width: 14px;
-            height: 14px;
           }
 
           .hero-buttons {
@@ -1359,7 +1370,7 @@ const EximPage = () => {
           }
 
           .cta-section h2 {
-            font-size: 2rem;
+            font-size: 1.8rem;
           }
 
           .cta-section p {
@@ -1379,7 +1390,6 @@ const EximPage = () => {
           }
         }
 
-        /* Very Small Devices */
         @media (max-width: 360px) {
           .hero-title {
             font-size: 1.6rem;
@@ -1398,7 +1408,7 @@ const EximPage = () => {
           }
 
           .cta-section h2 {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
           }
 
           .cta-primary,

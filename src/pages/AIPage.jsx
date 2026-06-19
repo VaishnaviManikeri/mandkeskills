@@ -32,9 +32,8 @@ const AIPage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
-          <img src="/assets/images/ai.png" alt="AI & Data Science Background" />
+          <img src="/assets/images/ai1.png" alt="AI & Data Science Background" />
         </div>
-        <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content fade-up">
@@ -490,8 +489,8 @@ const AIPage = () => {
           padding: 12px 22px;
           border-radius: 50px;
           background: rgba(135, 206, 235, 0.15);
-          border: 1px solid rgba(135, 206, 235, 0.3);
-          color: #ffffff;
+          border: 1px solid #000000;
+          color: #000000;
           font-weight: 600;
           backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
@@ -509,7 +508,7 @@ const AIPage = () => {
           font-weight: 800;
           line-height: 1.1;
           margin-top: 25px;
-          color: #ffffff;
+          color: #000000;
           font-family: "Times New Roman", "Poppins", serif;
         }
 
@@ -521,7 +520,7 @@ const AIPage = () => {
 
         .hero-description {
           margin-top: 25px;
-          color: #e2e8f0;
+          color: #000000;
           font-size: 1.1rem;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
@@ -541,8 +540,8 @@ const AIPage = () => {
           padding: 10px 22px;
           border-radius: 50px;
           background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          color: #ffffff;
+          border: 1px solid #000000;
+          color: #000000;
           font-weight: 500;
           font-size: 0.9rem;
           backdrop-filter: blur(10px);
@@ -552,7 +551,7 @@ const AIPage = () => {
         .tag-icon {
           width: 18px;
           height: 18px;
-          color: #87CEEB;
+          color: #000000;
         }
 
         .hero-buttons {

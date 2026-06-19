@@ -28,9 +28,8 @@ const InsurancePage = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-background">
-          <img src="/assets/images/i.png" alt="Insurance Background" />
+          <img src="/assets/images/i2.png" alt="Insurance Background" />
         </div>
-        <div className="hero-overlay"></div>
         <div className="container">
           <div className="hero-grid">
             <div className="hero-content fade-up">
@@ -302,7 +301,7 @@ const InsurancePage = () => {
         </div>
       </section>
 
-      {/* Who Hires Section */}
+      {/* Who Hires Section - Navy Blue Footer */}
       <section className="hires-section">
         <div className="container">
           <Building2 className="hires-icon" />
@@ -366,7 +365,7 @@ const InsurancePage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Navy Blue Footer */}
       <section className="cta-section">
         <div className="container">
           <h2>Ready to Enrol?</h2>
@@ -401,14 +400,14 @@ const InsurancePage = () => {
           margin: auto;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - Pure White Background */
         .hero-section {
           position: relative;
           min-height: 100vh;
           display: flex;
           align-items: center;
           overflow: hidden;
-          background: none;
+          background: #ffffff;
         }
 
         .hero-background {
@@ -423,20 +422,6 @@ const InsurancePage = () => {
           width: 100%;
           height: 100%;
           object-fit: cover;
-        }
-
-        .hero-overlay {
-          position: absolute;
-          inset: 0;
-          background: linear-gradient(
-            135deg,
-            rgba(2, 6, 23, 0.92) 0%,
-            rgba(15, 23, 42, 0.85) 30%,
-            rgba(23, 37, 84, 0.75) 60%,
-            rgba(30, 58, 95, 0.6) 85%,
-            rgba(30, 58, 95, 0.3) 100%
-          );
-          z-index: 1;
         }
 
         .hero-grid {
@@ -462,11 +447,10 @@ const InsurancePage = () => {
           gap: 10px;
           padding: 12px 22px;
           border-radius: 50px;
-          background: rgba(59, 130, 246, 0.15);
-          border: 1px solid rgba(59, 130, 246, 0.3);
-          color: #60a5fa;
+          background: #dbeafe;
+          border: 1px solid #93c5fd;
+          color: #1e40af;
           font-weight: 600;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
@@ -480,19 +464,19 @@ const InsurancePage = () => {
           font-weight: 800;
           line-height: 1.1;
           margin-top: 25px;
-          color: white;
+          color: #0f172a;
           font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-title span {
           display: block;
-          color: #3b82f6;
+          color: #2563eb;
           font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-description {
           margin-top: 25px;
-          color: #cbd5e1;
+          color: #475569;
           font-size: 1.1rem;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
@@ -511,18 +495,18 @@ const InsurancePage = () => {
           gap: 8px;
           padding: 10px 22px;
           border-radius: 50px;
-          background: rgba(255, 255, 255, 0.08);
-          border: 1px solid rgba(255, 255, 255, 0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           font-weight: 500;
           font-size: 14px;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
         .tag-icon {
           width: 18px;
           height: 18px;
+          color: #2563eb;
         }
 
         .hero-buttons {
@@ -557,13 +541,12 @@ const InsurancePage = () => {
         }
 
         .secondary-btn {
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.15);
-          color: white;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           padding: 15px 30px;
           border-radius: 14px;
           cursor: pointer;
-          backdrop-filter: blur(10px);
           transition: 0.4s;
           display: flex;
           gap: 10px;
@@ -572,7 +555,8 @@ const InsurancePage = () => {
         }
 
         .secondary-btn:hover {
-          background: rgba(255,255,255,0.15);
+          background: #e2e8f0;
+          transform: translateY(-5px);
         }
 
         .fade-up {
@@ -606,10 +590,13 @@ const InsurancePage = () => {
           box-shadow: 0 20px 50px rgba(0,0,0,0.08);
           transition: 0.4s;
           font-family: "Poppins", sans-serif;
+          border: 1px solid #e2e8f0;
         }
 
         .stat-card:hover {
           transform: translateY(-10px);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
         }
 
         .stat-card svg {
@@ -636,7 +623,7 @@ const InsurancePage = () => {
         }
 
         .section-header span {
-          color: #3b82f6;
+          color: #2563eb;
           font-weight: 700;
           font-family: "Poppins", sans-serif;
         }
@@ -691,13 +678,13 @@ const InsurancePage = () => {
           flex-shrink: 0;
           width: 48px;
           height: 48px;
-          background: #ffffff;
+          background: #dbeafe;
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #3b82f6;
-          border: 1px solid #e2e8f0;
+          color: #2563eb;
+          border: 1px solid #93c5fd;
           box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
@@ -747,7 +734,7 @@ const InsurancePage = () => {
         .course-card:hover {
           transform: translateY(-12px);
           border-color: #3b82f6;
-          box-shadow: 0 20px 50px rgba(59, 130, 246, 0.1);
+          box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
         }
 
         .course-card svg {
@@ -812,20 +799,21 @@ const InsurancePage = () => {
         .product-card:hover {
           transform: translateY(-10px);
           border-color: #3b82f6;
-          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .product-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: white;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .product-icon {
-          color: #3b82f6;
+          color: #2563eb;
         }
 
         .product-card h3 {
@@ -868,22 +856,23 @@ const InsurancePage = () => {
         .skill-card:hover {
           transform: translateY(-8px);
           border-color: #3b82f6;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .skill-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: #f8fafc;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .skill-icon {
           width: 32px;
           height: 32px;
-          color: #3b82f6;
+          color: #2563eb;
         }
 
         .skill-card h3 {
@@ -902,7 +891,7 @@ const InsurancePage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* HIRES */
+        /* HIRES - Navy Blue Footer */
         .hires-section {
           padding: 100px 0;
           background: linear-gradient(
@@ -918,7 +907,7 @@ const InsurancePage = () => {
         .hires-icon {
           width: 64px;
           height: 64px;
-          color: #3b82f6;
+          color: #60a5fa;
           margin-bottom: 20px;
         }
 
@@ -927,6 +916,7 @@ const InsurancePage = () => {
           font-weight: 700;
           margin-bottom: 16px;
           font-family: "Times New Roman", "Poppins", serif;
+          color: #ffffff;
         }
 
         .hires-section p {
@@ -958,6 +948,7 @@ const InsurancePage = () => {
           font-weight: 500;
           font-family: "Poppins", sans-serif;
           transition: all 0.3s;
+          color: white;
         }
 
         .hire-card:hover {
@@ -966,7 +957,7 @@ const InsurancePage = () => {
         }
 
         .hire-card svg {
-          color: #3b82f6;
+          color: #60a5fa;
         }
 
         /* BENEFITS */
@@ -994,20 +985,21 @@ const InsurancePage = () => {
         .benefit-card:hover {
           transform: translateY(-10px);
           border-color: #3b82f6;
-          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.1);
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .benefit-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: white;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .benefit-icon {
-          color: #3b82f6;
+          color: #2563eb;
           width: 32px;
           height: 32px;
         }
@@ -1027,14 +1019,15 @@ const InsurancePage = () => {
           line-height: 1.6;
         }
 
-        /* CTA */
+        /* CTA - Navy Blue Footer */
         .cta-section {
           padding: 120px 20px;
           text-align: center;
           background: linear-gradient(
             135deg,
             #1e3a5f,
-            #0f172a
+            #0f172a,
+            #1e293b
           );
           color: white;
         }
@@ -1042,6 +1035,7 @@ const InsurancePage = () => {
         .cta-section h2 {
           font-size: 3.5rem;
           font-family: "Times New Roman", "Poppins", serif;
+          color: #ffffff;
         }
 
         .cta-section p {
@@ -1182,16 +1176,6 @@ const InsurancePage = () => {
 
           .hero-buttons {
             justify-content: center;
-          }
-
-          .hero-overlay {
-            background: linear-gradient(
-              to bottom,
-              rgba(2, 6, 23, 0.92) 0%,
-              rgba(15, 23, 42, 0.85) 30%,
-              rgba(23, 37, 84, 0.8) 60%,
-              rgba(30, 58, 95, 0.7) 100%
-            );
           }
 
           .section-header h2,

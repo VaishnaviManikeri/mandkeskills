@@ -11,33 +11,46 @@ import {
   Building2,
   ArrowRight,
   CheckCircle,
+  Award,
+  Zap,
+  TrendingUp,
+  BookOpen,
+  Calendar,
+  BarChart3,
+  Sparkles,
 } from "lucide-react";
 
 export default function Home() {
   const courses = [
     {
       title: "AI & Data Science Excellence Program",
-      link: "/courses/ai-data-science"
+      link: "/courses/ai-data-science",
+      icon: <BarChart3 size={32} />,
     },
     {
       title: "Tally Prime Professional",
-      link: "/courses/tally"
+      link: "/courses/tally",
+      icon: <BookOpen size={32} />,
     },
     {
       title: "Cyber Security",
-      link: "/courses/ethical-hacking"
+      link: "/courses/ethical-hacking",
+      icon: <Award size={32} />,
     },
     {
       title: "Campus To Corporate",
-      link: "/courses/personality"
+      link: "/courses/personality",
+      icon: <TrendingUp size={32} />,
     },
     {
       title: "EXIM Trade Procedures",
-      link: "/courses/exim"
+      link: "/courses/exim",
+      icon: <Calendar size={32} />,
     },
     {
       title: "Digital Skills Programs",
-      link: "/courses/personality"
+      link: "/courses/personality",
+      icon: <Zap size={32} />,
     },
   ];
 
@@ -78,6 +91,7 @@ export default function Home() {
 
             <div className="hero-text fade-up">
               <span className="hero-badge">
+                <Sparkles size={16} />
                 A Hub for Job-Ready Courses
               </span>
 
@@ -110,7 +124,7 @@ export default function Home() {
               <img
                 src={heroImage}
                 alt="MILES Hero"
-                className="hero-image floating"
+                className="hero-image"
               />
             </div>
 
@@ -212,7 +226,9 @@ export default function Home() {
           <div className="courses-grid">
             {courses.map((course, index) => (
               <div key={index} className="course-card">
-                <GraduationCap size={40} />
+                <div className="course-icon-wrapper">
+                  {course.icon}
+                </div>
 
                 <h3>{course.title}</h3>
 

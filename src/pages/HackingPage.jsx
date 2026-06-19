@@ -347,7 +347,7 @@ const HackingPage = () => {
         </div>
       </section>
 
-      {/* Who Hires Section */}
+      {/* Who Hires Section - Sky Blue Footer */}
       <section className="hires-section">
         <div className="container">
           <Building2 className="hires-icon" />
@@ -415,7 +415,7 @@ const HackingPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* CTA Section - Sky Blue Footer */}
       <section className="cta-section">
         <div className="container">
           <h2>Ready to Enrol?</h2>
@@ -445,7 +445,7 @@ const HackingPage = () => {
         }
 
         .hacking-page {
-          font-family: "Poppins", sans-serif;
+          font-family: "Poppins", "Times New Roman", serif;
           overflow-x: hidden;
           background: #ffffff;
         }
@@ -457,14 +457,14 @@ const HackingPage = () => {
           padding: 0 15px;
         }
 
-        /* HERO SECTION */
+        /* HERO SECTION - Pure White Background */
         .hero-section {
           position: relative;
           min-height: 100vh;
           display: flex;
           align-items: center;
           overflow: hidden;
-          background: #020617;
+          background: #ffffff;
         }
 
         .hero-background {
@@ -481,7 +481,6 @@ const HackingPage = () => {
           object-fit: cover;
         }
 
-      
         .hero-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
@@ -505,11 +504,10 @@ const HackingPage = () => {
           gap: 10px;
           padding: 12px 22px;
           border-radius: 50px;
-          background: rgba(139, 92, 246, 0.15);
-          border: 1px solid rgba(139, 92, 246, 0.3);
-          color: #c4b5fd;
+          background: #dbeafe;
+          border: 1px solid #93c5fd;
+          color: #1e40af;
           font-weight: 600;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
           font-size: 0.9rem;
         }
@@ -517,7 +515,7 @@ const HackingPage = () => {
         .inline-icon {
           width: 20px;
           height: 20px;
-          color: #a78bfa;
+          color: #2563eb;
         }
 
         .hero-title {
@@ -525,19 +523,19 @@ const HackingPage = () => {
           font-weight: 800;
           line-height: 1.1;
           margin-top: 25px;
-          color: #000000;
-          font-family: "Times New Roman", Times, serif;
+          color: #0f172a;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-title span {
           display: block;
-          color: #a78bfa;
-          font-family: "Times New Roman", Times, serif;
+          color: #2563eb;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .hero-description {
           margin-top: 25px;
-          color: #000000;
+          color: #475569;
           font-size: 1.1rem;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
@@ -556,19 +554,18 @@ const HackingPage = () => {
           gap: 8px;
           padding: 10px 22px;
           border-radius: 50px;
-          background: #FFFFFF;
-          border: 1px solid #a78bfa;
-          color: #000000;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           font-weight: 500;
           font-size: 0.9rem;
-          backdrop-filter: blur(10px);
           font-family: "Poppins", sans-serif;
         }
 
         .tag-icon {
           width: 18px;
           height: 18px;
-          color: #a78bfa;
+          color: #2563eb;
         }
 
         .hero-buttons {
@@ -581,8 +578,8 @@ const HackingPage = () => {
         .primary-btn {
           background: linear-gradient(
             135deg,
-            #8b5cf6,
-            #7c3aed
+            #3b82f6,
+            #2563eb
           );
           color: #ffffff;
           border: none;
@@ -594,28 +591,23 @@ const HackingPage = () => {
           gap: 10px;
           align-items: center;
           transition: all 0.4s ease;
-          box-shadow: 0 15px 35px rgba(139, 92, 246, 0.35);
+          box-shadow: 0 15px 35px rgba(59, 130, 246, 0.35);
           font-family: "Poppins", sans-serif;
           font-size: 1rem;
         }
 
         .primary-btn:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 45px rgba(139, 92, 246, 0.45);
+          box-shadow: 0 20px 45px rgba(59, 130, 246, 0.45);
         }
 
         .secondary-btn {
-           background: linear-gradient(
-            135deg,
-            #8b5cf6,
-            #7c3aed
-          );
-          border: 1px solid rgba(255,255,255,0.15);
-          color: #ffffff;
+          background: #f1f5f9;
+          border: 1px solid #e2e8f0;
+          color: #0f172a;
           padding: 15px 30px;
           border-radius: 14px;
           cursor: pointer;
-          backdrop-filter: blur(10px);
           transition: all 0.4s;
           display: inline-flex;
           gap: 10px;
@@ -625,7 +617,7 @@ const HackingPage = () => {
         }
 
         .secondary-btn:hover {
-          background: rgba(255,255,255,0.15);
+          background: #e2e8f0;
           transform: translateY(-5px);
         }
 
@@ -660,22 +652,24 @@ const HackingPage = () => {
           box-shadow: 0 20px 50px rgba(0,0,0,0.08);
           transition: all 0.4s;
           font-family: "Poppins", sans-serif;
+          border: 1px solid #e2e8f0;
         }
 
         .stat-card:hover {
           transform: translateY(-10px);
-          box-shadow: 0 25px 60px rgba(0,0,0,0.12);
+          border-color: #3b82f6;
+          box-shadow: 0 25px 60px rgba(59, 130, 246, 0.15);
         }
 
         .stat-card svg {
-          color: #8b5cf6;
+          color: #3b82f6;
         }
 
         .stat-card h3 {
           font-size: 2rem;
           margin-top: 15px;
           color: #0f172a;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .stat-card p {
@@ -692,7 +686,7 @@ const HackingPage = () => {
         }
 
         .section-header span {
-          color: #8b5cf6;
+          color: #2563eb;
           font-weight: 700;
           font-size: 0.9rem;
           letter-spacing: 1px;
@@ -704,7 +698,7 @@ const HackingPage = () => {
           font-size: 3rem;
           margin-top: 15px;
           color: #0f172a;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .section-header p {
@@ -751,13 +745,13 @@ const HackingPage = () => {
           flex-shrink: 0;
           width: 48px;
           height: 48px;
-          background: #ffffff;
+          background: #dbeafe;
           border-radius: 12px;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: #8b5cf6;
-          border: 1px solid #e2e8f0;
+          color: #2563eb;
+          border: 1px solid #93c5fd;
           box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
@@ -766,7 +760,7 @@ const HackingPage = () => {
         }
 
         .detail-content h3 {
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
           font-size: 1.1rem;
           font-weight: 700;
           color: #0f172a;
@@ -806,19 +800,19 @@ const HackingPage = () => {
 
         .course-card:hover {
           transform: translateY(-12px);
-          box-shadow: 0 25px 60px rgba(0,0,0,0.1);
-          border-color: #8b5cf6;
+          box-shadow: 0 25px 60px rgba(59, 130, 246, 0.15);
+          border-color: #3b82f6;
         }
 
         .course-card svg {
-          color: #8b5cf6;
+          color: #3b82f6;
         }
 
         .course-card h3 {
           margin: 20px 0 10px;
           color: #0f172a;
           font-size: 1.2rem;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
           font-weight: 700;
         }
 
@@ -833,7 +827,7 @@ const HackingPage = () => {
           margin-top: 20px;
           border: none;
           background: transparent;
-          color: #7c3aed;
+          color: #2563eb;
           font-weight: 600;
           display: inline-flex;
           align-items: center;
@@ -845,7 +839,7 @@ const HackingPage = () => {
         }
 
         .course-card button:hover {
-          color: #8b5cf6;
+          color: #3b82f6;
           gap: 12px;
         }
 
@@ -873,21 +867,22 @@ const HackingPage = () => {
 
         .domain-card:hover {
           transform: translateY(-10px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .domain-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: #ffffff;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .domain-icon {
-          color: #8b5cf6;
+          color: #2563eb;
         }
 
         .domain-card h3 {
@@ -895,7 +890,7 @@ const HackingPage = () => {
           font-weight: 700;
           color: #0f172a;
           margin-bottom: 10px;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .domain-card p {
@@ -929,23 +924,24 @@ const HackingPage = () => {
 
         .skill-card:hover {
           transform: translateY(-8px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .skill-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: #f8fafc;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
           box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+          border: 1px solid #93c5fd;
         }
 
         .skill-icon {
           width: 32px;
           height: 32px;
-          color: #8b5cf6;
+          color: #2563eb;
         }
 
         .skill-card h3 {
@@ -953,7 +949,7 @@ const HackingPage = () => {
           font-weight: 700;
           color: #0f172a;
           margin: 0 0 10px;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .skill-card p {
@@ -988,17 +984,18 @@ const HackingPage = () => {
 
         .feature-showcase-card:hover {
           transform: translateY(-10px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .feature-showcase-icon {
           display: inline-flex;
           padding: 16px;
-          background: #ffffff;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
-          color: #8b5cf6;
+          color: #2563eb;
+          border: 1px solid #93c5fd;
         }
 
         .feature-showcase-card h3 {
@@ -1006,7 +1003,7 @@ const HackingPage = () => {
           font-weight: 700;
           color: #0f172a;
           margin-bottom: 10px;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .feature-showcase-card p {
@@ -1015,14 +1012,14 @@ const HackingPage = () => {
           font-family: "Poppins", sans-serif;
         }
 
-        /* HIRES */
+        /* HIRES - Sky Blue Footer */
         .hires-section {
           padding: 100px 0;
           background: linear-gradient(
             135deg,
-            #1e1b4b,
-            #312e81,
-            #4c1d95
+            #1e3a5f,
+            #0f172a,
+            #1e293b
           );
           text-align: center;
           color: #ffffff;
@@ -1031,7 +1028,7 @@ const HackingPage = () => {
         .hires-icon {
           width: 64px;
           height: 64px;
-          color: #a78bfa;
+          color: #60a5fa;
           margin-bottom: 20px;
         }
 
@@ -1039,13 +1036,13 @@ const HackingPage = () => {
           font-size: 2.5rem;
           font-weight: 700;
           margin-bottom: 16px;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
           color: #ffffff;
         }
 
         .hires-section p {
           font-size: 1.1rem;
-          color: #e2e8f0;
+          color: #cbd5e1;
           max-width: 600px;
           margin: 0 auto 40px;
           font-family: "Poppins", sans-serif;
@@ -1081,13 +1078,13 @@ const HackingPage = () => {
         }
 
         .hire-card svg {
-          color: #a78bfa;
+          color: #60a5fa;
         }
 
         /* BENEFITS */
         .benefits-section {
           padding: 120px 0;
-          background: #f8fafc;
+          background: #ffffff;
         }
 
         .benefits-grid {
@@ -1100,7 +1097,7 @@ const HackingPage = () => {
         .benefit-card {
           text-align: center;
           padding: 40px 20px;
-          background: #ffffff;
+          background: #f8fafc;
           border-radius: 20px;
           transition: all 0.4s;
           border: 1px solid #e2e8f0;
@@ -1108,20 +1105,21 @@ const HackingPage = () => {
 
         .benefit-card:hover {
           transform: translateY(-10px);
-          border-color: #8b5cf6;
-          box-shadow: 0 20px 40px rgba(139, 92, 246, 0.1);
+          border-color: #3b82f6;
+          box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
         }
 
         .benefit-icon-wrapper {
           display: inline-flex;
           padding: 16px;
-          background: #f8fafc;
+          background: #dbeafe;
           border-radius: 16px;
           margin-bottom: 20px;
+          border: 1px solid #93c5fd;
         }
 
         .benefit-icon {
-          color: #8b5cf6;
+          color: #2563eb;
           width: 32px;
           height: 32px;
         }
@@ -1131,7 +1129,7 @@ const HackingPage = () => {
           font-weight: 700;
           color: #0f172a;
           margin-bottom: 10px;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
         }
 
         .benefit-card p {
@@ -1141,28 +1139,29 @@ const HackingPage = () => {
           line-height: 1.6;
         }
 
-        /* CTA */
+        /* CTA - Sky Blue Footer */
         .cta-section {
           padding: 120px 20px;
           text-align: center;
           background: linear-gradient(
             135deg,
-            #1e1b4b,
-            #312e81
+            #1e3a5f,
+            #0f172a,
+            #1e293b
           );
           color: #ffffff;
         }
 
         .cta-section h2 {
           font-size: 3.5rem;
-          font-family: "Times New Roman", Times, serif;
+          font-family: "Times New Roman", "Poppins", serif;
           color: #ffffff;
         }
 
         .cta-section p {
           max-width: 700px;
           margin: 25px auto;
-          color: #e2e8f0;
+          color: #cbd5e1;
           line-height: 1.8;
           font-family: "Poppins", sans-serif;
           font-size: 1.1rem;
@@ -1177,7 +1176,7 @@ const HackingPage = () => {
         }
 
         .cta-primary {
-          background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+          background: linear-gradient(135deg, #3b82f6, #2563eb);
           color: #ffffff;
           border: none;
           padding: 16px 35px;
@@ -1189,13 +1188,13 @@ const HackingPage = () => {
           align-items: center;
           transition: all 0.4s;
           font-family: "Poppins", sans-serif;
-          box-shadow: 0 15px 35px rgba(139, 92, 246, 0.3);
+          box-shadow: 0 15px 35px rgba(59, 130, 246, 0.3);
           font-size: 1rem;
         }
 
         .cta-primary:hover {
           transform: translateY(-5px);
-          box-shadow: 0 20px 45px rgba(139, 92, 246, 0.4);
+          box-shadow: 0 20px 45px rgba(59, 130, 246, 0.4);
         }
 
         .cta-secondary {
@@ -1243,13 +1242,12 @@ const HackingPage = () => {
         .cta-note {
           margin-top: 30px;
           font-size: 0.95rem;
-          color: #cbd5e1;
+          color: #94a3b8;
           font-family: "Poppins", sans-serif;
         }
 
         /* ========== RESPONSIVE DESIGN ========== */
 
-        /* Tablets & Small Laptops */
         @media (max-width: 1024px) {
           .hero-grid {
             grid-template-columns: 1fr 1fr;
@@ -1302,7 +1300,6 @@ const HackingPage = () => {
           }
         }
 
-        /* Mobile Landscape & Tablets */
         @media (max-width: 768px) {
           .hero-section {
             min-height: 80vh;
@@ -1329,16 +1326,6 @@ const HackingPage = () => {
 
           .hero-buttons {
             justify-content: center;
-          }
-
-          .hero-overlay {
-            background: linear-gradient(
-              to bottom,
-              rgba(2, 6, 23, 0.95) 0%,
-              rgba(15, 23, 42, 0.85) 30%,
-              rgba(76, 29, 149, 0.8) 60%,
-              rgba(139, 92, 246, 0.7) 100%
-            );
           }
 
           .hero-badge {
@@ -1558,7 +1545,6 @@ const HackingPage = () => {
           }
         }
 
-        /* Mobile Phones */
         @media (max-width: 480px) {
           .container {
             width: 95%;
@@ -1754,7 +1740,6 @@ const HackingPage = () => {
           }
         }
 
-        /* Very Small Devices */
         @media (max-width: 360px) {
           .hero-title {
             font-size: 1.6rem;
