@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Make sure to import Link from react-router-dom
 
 const Footer = () => {
   return (
@@ -28,10 +29,11 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-subtitle">QUICK LINKS</h4>
             <ul className="footer-links">
-              <li><a href="/">Home</a></li>
-              <li><a href="/about">About MILES</a></li>
-              <li><a href="/courses">Courses</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/about">About MILES</Link></li>
+              <li><Link to="/courses">Courses</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/registeration" className="registration-link">Register Now</Link></li>
             </ul>
           </div>
 
@@ -52,6 +54,10 @@ const Footer = () => {
                   Subscribe <span className="btn-icon">→</span>
                 </button>
               </div>
+              {/* Registration Button */}
+              <Link to="/registeration" className="registration-btn">
+                Register Now <span className="btn-icon">→</span>
+              </Link>
             </div>
           </div>
         </div>
@@ -202,6 +208,29 @@ const Footer = () => {
           margin-right: 5px;
         }
 
+        /* Registration Link in Quick Links */
+        .registration-link {
+          background: #ff6b35;
+          padding: 4px 15px;
+          border-radius: 20px;
+          font-weight: 600 !important;
+          transition: all 0.3s ease !important;
+        }
+
+        .registration-link:hover {
+          background: #ff8255 !important;
+          color: #ffffff !important;
+          padding-left: 20px !important;
+          transform: scale(1.05);
+        }
+
+        .registration-link::before {
+          content: "★" !important;
+          opacity: 1 !important;
+          margin-right: 5px !important;
+          color: #ffffff;
+        }
+
         /* Newsletter */
         .newsletter-section {
           display: flex;
@@ -229,7 +258,7 @@ const Footer = () => {
           border-radius: 10px;
           font-size: 0.9rem;
           font-family: "Poppins", sans-serif;
-          color: #ffffff;
+          color: #333;
           background: #ffffff;
           transition: all 0.3s ease;
           width: 100%;
@@ -275,12 +304,47 @@ const Footer = () => {
           transform: translateY(0);
         }
 
+        /* Registration Button */
+        .registration-btn {
+          background: #ff6b35;
+          color: #ffffff;
+          border: none;
+          padding: 14px 28px;
+          border-radius: 10px;
+          font-weight: 700;
+          font-size: 1rem;
+          cursor: pointer;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          transition: all 0.4s ease;
+          font-family: "Poppins", sans-serif;
+          width: 100%;
+          text-decoration: none;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .registration-btn:hover {
+          background: #ff8255;
+          transform: translateY(-3px);
+          box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
+          color: #ffffff;
+        }
+
+        .registration-btn:active {
+          transform: translateY(0);
+        }
+
         .btn-icon {
           font-size: 1.2rem;
           transition: transform 0.3s ease;
         }
 
-        .newsletter-btn:hover .btn-icon {
+        .newsletter-btn:hover .btn-icon,
+        .registration-btn:hover .btn-icon {
           transform: translateX(4px);
         }
 
@@ -398,6 +462,11 @@ const Footer = () => {
             font-size: 0.9rem;
           }
 
+          .registration-btn {
+            padding: 12px 24px;
+            font-size: 0.9rem;
+          }
+
           .footer-bottom-content {
             flex-direction: column;
             text-align: center;
@@ -475,6 +544,11 @@ const Footer = () => {
             font-size: 0.8rem;
           }
 
+          .registration-link {
+            padding: 3px 12px;
+            font-size: 0.8rem !important;
+          }
+
           .newsletter-section {
             align-items: flex-start;
             width: 100%;
@@ -496,6 +570,11 @@ const Footer = () => {
 
           .newsletter-btn {
             padding: 10px 16px;
+            font-size: 0.85rem;
+          }
+
+          .registration-btn {
+            padding: 12px 20px;
             font-size: 0.85rem;
           }
 
@@ -557,6 +636,11 @@ const Footer = () => {
             font-size: 0.75rem;
           }
 
+          .registration-link {
+            padding: 2px 10px;
+            font-size: 0.7rem !important;
+          }
+
           .newsletter-input {
             font-size: 0.75rem;
             padding: 8px 10px;
@@ -565,6 +649,11 @@ const Footer = () => {
           .newsletter-btn {
             font-size: 0.8rem;
             padding: 8px 14px;
+          }
+
+          .registration-btn {
+            font-size: 0.8rem;
+            padding: 10px 16px;
           }
 
           .footer-bottom {
