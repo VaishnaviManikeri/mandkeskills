@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-const PAYMENT_LINK = "https://razorpay.com/payment-link/plink_T5MhqofsdS70C3";
+const PAYMENT_LINK = "https://rzp.io/rzp/ZWhhKKjv";
 
 // ── Inline SVG icon primitives ──────────────────────────────────────────────
 const Icon = ({ d, size = 16, stroke = "currentColor", strokeWidth = 2.2, children, viewBox = "0 0 24 24" }) => (
