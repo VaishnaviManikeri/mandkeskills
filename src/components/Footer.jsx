@@ -1,7 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom'; // Make sure to import Link from react-router-dom
+import { useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
+  // Function to handle navigation with scroll to top
+  const handleNavigation = (path) => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+    navigate(path);
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -29,11 +40,62 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-subtitle">QUICK LINKS</h4>
             <ul className="footer-links">
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/about">About MILES</Link></li>
-              <li><Link to="/courses">Courses</Link></li>
-              <li><Link to="/contact">Contact</Link></li>
-              <li><Link to="/registeration" className="registration-link">Register Now</Link></li>
+              <li>
+                <a 
+                  href="/" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation('/');
+                  }}
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/about" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation('/about');
+                  }}
+                >
+                  About MILES
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/courses" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation('/courses');
+                  }}
+                >
+                  Courses
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/contact" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation('/contact');
+                  }}
+                >
+                  Contact
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="/webinar" 
+                  className="registration-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    handleNavigation('/webinar');
+                  }}
+                >
+                  Webinar
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -54,10 +116,6 @@ const Footer = () => {
                   Subscribe <span className="btn-icon">→</span>
                 </button>
               </div>
-              {/* Registration Button */}
-              <Link to="/registeration" className="registration-btn">
-                Register Now <span className="btn-icon">→</span>
-              </Link>
             </div>
           </div>
         </div>
@@ -109,7 +167,7 @@ const Footer = () => {
           grid-template-columns: 2fr 1fr 1.5fr;
           gap: 40px;
           padding-bottom: 40px;
-          border-bottom: 1px solid #e8f0fe;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         /* Footer Column */
@@ -120,7 +178,7 @@ const Footer = () => {
         }
 
         .footer-title {
-          font-size: 1.2rem;
+          font-size: clamp(1rem, 2vw, 1.2rem);
           font-weight: 700;
           color: #ffffff;
           font-family: "Times New Roman", Times, serif;
@@ -128,7 +186,7 @@ const Footer = () => {
         }
 
         .footer-subtitle {
-          font-size: 1rem;
+          font-size: clamp(0.85rem, 1.5vw, 1rem);
           font-weight: 700;
           color: #ffffff;
           font-family: "Times New Roman", Times, serif;
@@ -152,18 +210,19 @@ const Footer = () => {
         .info-icon {
           color: #ffffff;
           flex-shrink: 0;
-          font-size: 1.1rem;
+          font-size: clamp(0.9rem, 1.5vw, 1.1rem);
           margin-top: 2px;
           min-width: 20px;
         }
 
         .info-item p {
           color: #ffffff;
-          font-size: 0.9rem;
+          font-size: clamp(0.75rem, 1.2vw, 0.9rem);
           line-height: 1.6;
           font-family: "Poppins", sans-serif;
           margin: 0;
           text-align: left;
+          word-break: break-word;
         }
 
         /* Footer Links */
@@ -183,11 +242,12 @@ const Footer = () => {
         .footer-links li a {
           color: #ffffff;
           text-decoration: none;
-          font-size: 0.9rem;
+          font-size: clamp(0.75rem, 1.2vw, 0.9rem);
           font-family: "Poppins", sans-serif;
           transition: all 0.3s ease;
           position: relative;
           display: inline-block;
+          cursor: pointer;
         }
 
         .footer-links li a:hover {
@@ -240,7 +300,7 @@ const Footer = () => {
 
         .newsletter-text {
           color: #ffffff;
-          font-size: 0.9rem;
+          font-size: clamp(0.8rem, 1.2vw, 0.9rem);
           font-family: "Poppins", sans-serif;
           margin: 0;
         }
@@ -253,10 +313,10 @@ const Footer = () => {
         }
 
         .newsletter-input {
-          padding: 12px 16px;
+          padding: clamp(10px, 1.5vw, 12px) clamp(12px, 2vw, 16px);
           border: 1px solid #0284c7;
           border-radius: 10px;
-          font-size: 0.9rem;
+          font-size: clamp(0.75rem, 1.2vw, 0.9rem);
           font-family: "Poppins", sans-serif;
           color: #333;
           background: #ffffff;
@@ -280,10 +340,10 @@ const Footer = () => {
           background: #e4eef2;
           color: #1c96c5;
           border: none;
-          padding: 12px 24px;
+          padding: clamp(10px, 1.5vw, 12px) clamp(16px, 2vw, 24px);
           border-radius: 10px;
           font-weight: 600;
-          font-size: 0.95rem;
+          font-size: clamp(0.8rem, 1.2vw, 0.95rem);
           cursor: pointer;
           display: inline-flex;
           align-items: center;
@@ -304,47 +364,12 @@ const Footer = () => {
           transform: translateY(0);
         }
 
-        /* Registration Button */
-        .registration-btn {
-          background: #ff6b35;
-          color: #ffffff;
-          border: none;
-          padding: 14px 28px;
-          border-radius: 10px;
-          font-weight: 700;
-          font-size: 1rem;
-          cursor: pointer;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          gap: 8px;
-          transition: all 0.4s ease;
-          font-family: "Poppins", sans-serif;
-          width: 100%;
-          text-decoration: none;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
-        }
-
-        .registration-btn:hover {
-          background: #ff8255;
-          transform: translateY(-3px);
-          box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
-          color: #ffffff;
-        }
-
-        .registration-btn:active {
-          transform: translateY(0);
-        }
-
         .btn-icon {
-          font-size: 1.2rem;
+          font-size: clamp(1rem, 1.5vw, 1.2rem);
           transition: transform 0.3s ease;
         }
 
-        .newsletter-btn:hover .btn-icon,
-        .registration-btn:hover .btn-icon {
+        .newsletter-btn:hover .btn-icon {
           transform: translateX(4px);
         }
 
@@ -363,7 +388,7 @@ const Footer = () => {
 
         .copyright {
           color: #ffffff;
-          font-size: 0.85rem;
+          font-size: clamp(0.7rem, 1.1vw, 0.85rem);
           font-family: "Poppins", sans-serif;
           margin: 0;
         }
@@ -378,14 +403,14 @@ const Footer = () => {
           display: inline-flex;
           align-items: center;
           justify-content: center;
-          width: 40px;
-          height: 40px;
+          width: clamp(32px, 4vw, 40px);
+          height: clamp(32px, 4vw, 40px);
           border-radius: 50%;
           background: #f0f7ff;
           color: #0284c7;
           transition: all 0.3s ease;
           text-decoration: none;
-          font-size: 1rem;
+          font-size: clamp(0.8rem, 1.2vw, 1rem);
           font-weight: 600;
         }
 
@@ -398,28 +423,91 @@ const Footer = () => {
 
         .social-icon {
           line-height: 1;
-          font-size: 1.1rem;
+          font-size: clamp(0.8rem, 1.2vw, 1.1rem);
         }
 
-        /* ========== RESPONSIVE DESIGN ========== */
+        /* ========== EXTRA SMALL DEVICES (320px - 480px) ========== */
+        @media (max-width: 480px) {
+          .container {
+            width: 95%;
+            padding: 0 10px;
+          }
 
-        /* Tablets & Small Laptops */
-        @media (max-width: 1024px) {
+          .footer {
+            padding: 30px 0 0 0;
+          }
+
           .footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding-bottom: 25px;
+          }
+
+          .footer-column {
+            text-align: left;
+            align-items: flex-start;
+            width: 100%;
           }
 
           .footer-column:last-child {
-            grid-column: 1 / -1;
-            max-width: 400px;
-            margin: 0 auto;
+            grid-column: auto;
+            max-width: 100%;
+            align-items: flex-start;
+          }
+
+          .info-item {
+            justify-content: flex-start;
+            width: 100%;
+          }
+
+          .info-item p {
+            text-align: left;
+          }
+
+          .footer-links {
+            align-items: flex-start;
+            width: 100%;
+          }
+
+          .registration-link {
+            padding: 3px 12px;
+          }
+
+          .newsletter-section {
+            align-items: flex-start;
+            width: 100%;
+          }
+
+          .newsletter-text {
+            text-align: left;
+          }
+
+          .newsletter-form {
+            width: 100%;
+          }
+
+          .footer-bottom-content {
+            flex-direction: column;
+            text-align: center;
+            gap: 15px;
+          }
+
+          .copyright {
+            text-align: center;
+          }
+
+          .footer-social {
+            justify-content: center;
             width: 100%;
           }
         }
 
-        /* Mobile Landscape & Tablets */
-        @media (max-width: 768px) {
+        /* ========== MOBILE DEVICES (481px - 768px) ========== */
+        @media (min-width: 481px) and (max-width: 768px) {
+          .container {
+            width: 92%;
+          }
+
           .footer {
             padding: 40px 0 0 0;
           }
@@ -436,37 +524,6 @@ const Footer = () => {
             margin: 0;
           }
 
-          .footer-title {
-            font-size: 1.1rem;
-          }
-
-          .footer-subtitle {
-            font-size: 0.9rem;
-          }
-
-          .info-item p {
-            font-size: 0.85rem;
-          }
-
-          .footer-links li a {
-            font-size: 0.85rem;
-          }
-
-          .newsletter-input {
-            padding: 10px 14px;
-            font-size: 0.85rem;
-          }
-
-          .newsletter-btn {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-          }
-
-          .registration-btn {
-            padding: 12px 24px;
-            font-size: 0.9rem;
-          }
-
           .footer-bottom-content {
             flex-direction: column;
             text-align: center;
@@ -474,143 +531,263 @@ const Footer = () => {
           }
 
           .copyright {
-            font-size: 0.8rem;
-          }
-
-          .social-link {
-            width: 36px;
-            height: 36px;
-            font-size: 0.9rem;
-          }
-
-          .social-icon {
-            font-size: 1rem;
-          }
-        }
-
-        /* Mobile Phones */
-        @media (max-width: 480px) {
-          .container {
-            width: 95%;
-            padding: 0 10px;
-          }
-
-          .footer {
-            padding: 30px 0 0 0;
-          }
-
-          .footer-grid {
-            grid-template-columns: 1fr;
-            gap: 25px;
-            padding-bottom: 25px;
-          }
-
-          .footer-column {
-            text-align: left;
-            align-items: flex-start;
-            width: 100%;
-          }
-
-          .footer-column:last-child {
-            grid-column: auto;
-            max-width: 100%;
-            align-items: flex-start;
-          }
-
-          .footer-title {
-            font-size: 1rem;
-          }
-
-          .footer-subtitle {
-            font-size: 0.85rem;
-          }
-
-          .info-item {
-            justify-content: flex-start;
-            width: 100%;
-          }
-
-          .info-item p {
-            font-size: 0.8rem;
-            text-align: left;
-          }
-
-          .footer-links {
-            align-items: flex-start;
-            width: 100%;
-          }
-
-          .footer-links li a {
-            font-size: 0.8rem;
-          }
-
-          .registration-link {
-            padding: 3px 12px;
-            font-size: 0.8rem !important;
-          }
-
-          .newsletter-section {
-            align-items: flex-start;
-            width: 100%;
-          }
-
-          .newsletter-text {
-            font-size: 0.85rem;
-            text-align: left;
-          }
-
-          .newsletter-form {
-            width: 100%;
-          }
-
-          .newsletter-input {
-            padding: 10px 12px;
-            font-size: 0.8rem;
-          }
-
-          .newsletter-btn {
-            padding: 10px 16px;
-            font-size: 0.85rem;
-          }
-
-          .registration-btn {
-            padding: 12px 20px;
-            font-size: 0.85rem;
-          }
-
-          .footer-bottom {
-            padding: 20px 0;
-          }
-
-          .footer-bottom-content {
-            gap: 12px;
-            text-align: center;
-          }
-
-          .copyright {
-            font-size: 0.75rem;
             text-align: center;
           }
 
           .footer-social {
-            gap: 10px;
             justify-content: center;
-            width: 100%;
-          }
-
-          .social-link {
-            width: 32px;
-            height: 32px;
-            font-size: 0.8rem;
-          }
-
-          .social-icon {
-            font-size: 0.9rem;
           }
         }
 
-        /* Very Small Devices */
-        @media (max-width: 360px) {
+        /* ========== TABLETS (769px - 1024px) ========== */
+        @media (min-width: 769px) and (max-width: 1024px) {
+          .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+          }
+
+          .footer-column:last-child {
+            grid-column: 1 / -1;
+            max-width: 400px;
+            margin: 0 auto;
+            width: 100%;
+          }
+
+          .footer-column:last-child .newsletter-section {
+            align-items: center;
+            text-align: center;
+          }
+
+          .footer-column:last-child .info-item {
+            justify-content: center;
+          }
+
+          .footer-column:last-child .footer-links {
+            align-items: center;
+          }
+        }
+
+        /* ========== LAPTOPS (1025px - 1280px) ========== */
+        @media (min-width: 1025px) and (max-width: 1280px) {
+          .container {
+            width: 90%;
+            max-width: 1200px;
+          }
+
+          .footer-grid {
+            gap: 35px;
+          }
+        }
+
+        /* ========== DESKTOP (1281px - 1600px) ========== */
+        @media (min-width: 1281px) and (max-width: 1600px) {
+          .container {
+            max-width: 1280px;
+          }
+        }
+
+        /* ========== LARGE DESKTOP (1601px+) ========== */
+        @media (min-width: 1601px) {
+          .container {
+            max-width: 1440px;
+          }
+
+          .footer-grid {
+            gap: 50px;
+          }
+
+          .footer-title {
+            font-size: 1.4rem;
+          }
+
+          .footer-subtitle {
+            font-size: 1.1rem;
+          }
+
+          .info-item p {
+            font-size: 1rem;
+          }
+
+          .footer-links li a {
+            font-size: 1rem;
+          }
+
+          .newsletter-text {
+            font-size: 1rem;
+          }
+
+          .newsletter-input {
+            font-size: 1rem;
+            padding: 14px 20px;
+          }
+
+          .newsletter-btn {
+            font-size: 1.05rem;
+            padding: 14px 28px;
+          }
+
+          .copyright {
+            font-size: 0.95rem;
+          }
+
+          .social-link {
+            width: 44px;
+            height: 44px;
+            font-size: 1.1rem;
+          }
+
+          .social-icon {
+            font-size: 1.2rem;
+          }
+        }
+
+        /* ========== PRINT STYLES ========== */
+        @media print {
+          .footer {
+            background: #1c96c5 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+
+          .footer-title,
+          .footer-subtitle,
+          .info-item p,
+          .footer-links li a,
+          .newsletter-text,
+          .copyright {
+            color: #ffffff !important;
+          }
+
+          .social-link {
+            background: #f0f7ff !important;
+            color: #0284c7 !important;
+          }
+
+          .newsletter-btn {
+            background: #e4eef2 !important;
+            color: #1c96c5 !important;
+          }
+        }
+
+        /* ========== DARK MODE SUPPORT ========== */
+        @media (prefers-color-scheme: dark) {
+          .footer {
+            background: #1a7a9e;
+          }
+
+          .newsletter-input {
+            background: #ffffff;
+            color: #333;
+          }
+
+          .newsletter-input::placeholder {
+            color: #94a3b8;
+          }
+
+          .social-link {
+            background: #e8f0fe;
+            color: #0284c7;
+          }
+
+          .social-link:hover {
+            background: #0284c7;
+            color: #ffffff;
+          }
+        }
+
+        /* ========== REDUCED MOTION ========== */
+        @media (prefers-reduced-motion: reduce) {
+          *,
+          *::before,
+          *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+            scroll-behavior: auto !important;
+          }
+
+          .footer-links li a {
+            transition: none !important;
+          }
+
+          .footer-links li a:hover {
+            padding-left: 0 !important;
+          }
+
+          .footer-links li a::before {
+            transition: none !important;
+          }
+
+          .newsletter-btn {
+            transition: none !important;
+          }
+
+          .newsletter-btn:hover {
+            transform: none !important;
+          }
+
+          .social-link {
+            transition: none !important;
+          }
+
+          .social-link:hover {
+            transform: none !important;
+          }
+
+          .registration-link {
+            transition: none !important;
+          }
+
+          .registration-link:hover {
+            transform: none !important;
+            padding-left: 15px !important;
+          }
+        }
+
+        /* ========== HIGH CONTRAST MODE ========== */
+        @media (prefers-contrast: high) {
+          .footer {
+            background: #0d5a7a;
+          }
+
+          .footer-title,
+          .footer-subtitle,
+          .info-item p,
+          .footer-links li a,
+          .newsletter-text,
+          .copyright {
+            color: #ffffff !important;
+          }
+
+          .newsletter-input {
+            border: 2px solid #0284c7;
+          }
+
+          .newsletter-btn {
+            background: #ffffff;
+            color: #0d5a7a;
+            border: 2px solid #0d5a7a;
+          }
+
+          .social-link {
+            background: #ffffff;
+            color: #0d5a7a;
+            border: 2px solid #0d5a7a;
+          }
+
+          .social-link:hover {
+            background: #0d5a7a;
+            color: #ffffff;
+          }
+
+          .registration-link {
+            background: #ff6b35;
+            color: #ffffff !important;
+          }
+        }
+
+        /* ========== LANDSCAPE ORIENTATION ========== */
+        @media (max-height: 500px) and (orientation: landscape) {
           .footer {
             padding: 20px 0 0 0;
           }
@@ -620,58 +797,81 @@ const Footer = () => {
             padding-bottom: 20px;
           }
 
-          .footer-title {
-            font-size: 0.9rem;
+          .footer-column {
+            gap: 10px;
           }
 
-          .footer-subtitle {
-            font-size: 0.8rem;
+          .company-info {
+            gap: 8px;
           }
 
-          .info-item p {
-            font-size: 0.75rem;
+          .footer-links {
+            gap: 6px;
           }
 
-          .footer-links li a {
-            font-size: 0.75rem;
-          }
-
-          .registration-link {
-            padding: 2px 10px;
-            font-size: 0.7rem !important;
-          }
-
-          .newsletter-input {
-            font-size: 0.75rem;
-            padding: 8px 10px;
-          }
-
-          .newsletter-btn {
-            font-size: 0.8rem;
-            padding: 8px 14px;
-          }
-
-          .registration-btn {
-            font-size: 0.8rem;
-            padding: 10px 16px;
+          .newsletter-form {
+            gap: 8px;
           }
 
           .footer-bottom {
             padding: 15px 0;
           }
+        }
+
+        /* ========== FOLDABLE DEVICES ========== */
+        @media (max-width: 280px) {
+          .container {
+            width: 100%;
+            padding: 0 8px;
+          }
+
+          .footer {
+            padding: 15px 0 0 0;
+          }
+
+          .footer-grid {
+            gap: 15px;
+            padding-bottom: 15px;
+          }
+
+          .footer-title {
+            font-size: 0.85rem;
+          }
+
+          .footer-subtitle {
+            font-size: 0.75rem;
+          }
+
+          .info-item p {
+            font-size: 0.7rem;
+          }
+
+          .footer-links li a {
+            font-size: 0.7rem;
+          }
+
+          .newsletter-input {
+            font-size: 0.7rem;
+            padding: 6px 8px;
+          }
+
+          .newsletter-btn {
+            font-size: 0.7rem;
+            padding: 6px 10px;
+          }
 
           .copyright {
-            font-size: 0.7rem;
+            font-size: 0.65rem;
           }
 
           .social-link {
-            width: 28px;
-            height: 28px;
-            font-size: 0.7rem;
+            width: 24px;
+            height: 24px;
+            font-size: 0.65rem;
           }
 
           .social-icon {
-            font-size: 0.8rem;
+            font-size: 0.7rem;
           }
         }
       `}</style>

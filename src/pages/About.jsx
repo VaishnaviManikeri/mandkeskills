@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import heroImage from "/assets/images/a2.png";
 import image1 from "/assets/images/a1.png";
 import image2 from "/assets/images/2.png";
+import radhikaImage from "/assets/images/radhika.png";
+import indraneilImage from "/assets/images/indraneil.png";
 
 export default function About() {
   useEffect(() => {
@@ -103,7 +105,7 @@ export default function About() {
           margin-bottom: 16px;
         }
 
-        .about-hero h1 span {
+        .about-hero h1 .miles-blue {
           color: #0ea5e9;
         }
 
@@ -203,7 +205,7 @@ export default function About() {
           margin-bottom: 16px;
         }
 
-        .section-title span {
+        .section-title .miles-blue {
           color: #0ea5e9;
         }
 
@@ -291,9 +293,280 @@ export default function About() {
           font-weight: 500;
         }
 
-        .proposition-connector span {
+        .proposition-connector .miles-blue {
           color: #0ea5e9;
           font-weight: 600;
+        }
+
+        /* ─── FOUNDERS MIDDLE SECTION ─── */
+        .founders-middle-section {
+          background: #ffffff;
+        }
+
+        .founders-middle-box {
+          max-width: 900px;
+          margin: 0 auto;
+          text-align: center;
+        }
+
+        .founders-middle-box .section-label {
+          justify-content: center;
+        }
+
+        .founders-middle-box .section-title {
+          text-align: center;
+        }
+
+        .founders-middle-box .section-title .miles-blue {
+          color: #0ea5e9;
+        }
+
+        .founders-middle-box p {
+          font-size: 18px;
+          color: #475569;
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.9;
+          margin-bottom: 16px;
+        }
+
+        .founders-middle-box p:last-child {
+          margin-bottom: 0;
+        }
+
+        .founders-middle-box strong {
+          color: #0f172a;
+        }
+
+        .founders-middle-box .miles-blue {
+          color: #0ea5e9;
+        }
+
+        /* ─── FOUNDERS PROFILES SECTION ─── */
+        .founders-profiles-section {
+          background: #fafcff;
+        }
+
+        .founder-row {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 50px;
+          align-items: center;
+          margin-bottom: 60px;
+        }
+
+        .founder-row:last-child {
+          margin-bottom: 0;
+        }
+
+        .founder-row.reverse {
+          direction: rtl;
+        }
+
+        .founder-row.reverse .founder-info {
+          direction: ltr;
+        }
+
+        .founder-image-wrapper {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .founder-image {
+          width: 100%;
+          max-width: 400px;
+          border-radius: 24px;
+          box-shadow: 0 20px 60px rgba(14, 165, 233, 0.15);
+          transition: transform 0.3s;
+          aspect-ratio: 4/5;
+          object-fit: cover;
+        }
+
+        .founder-image:hover {
+          transform: scale(1.03);
+          box-shadow: 0 25px 70px rgba(14, 165, 233, 0.2);
+        }
+
+        .founder-info {
+          display: flex;
+          flex-direction: column;
+        }
+
+        .founder-info .founder-name {
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 32px;
+          font-weight: 800;
+          color: #0f172a;
+          margin-bottom: 4px;
+        }
+
+        .founder-info .founder-role {
+          font-size: 16px;
+          color: #0ea5e9;
+          font-weight: 600;
+          font-family: 'Poppins', sans-serif;
+          margin-bottom: 16px;
+        }
+
+        .founder-info .founder-desc {
+          font-size: 15px;
+          color: #475569;
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.8;
+          margin-bottom: 20px;
+        }
+
+        .founder-capabilities {
+          border-top: 1px solid #e2e8f0;
+          padding-top: 18px;
+          margin-bottom: 16px;
+        }
+
+        .founder-capabilities h5 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 14px;
+          font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 10px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .capability-list {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+
+        .capability-list li {
+          font-size: 14px;
+          color: #475569;
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.6;
+          padding: 6px 0;
+          padding-left: 28px;
+          position: relative;
+        }
+
+        .capability-list li::before {
+          content: '▹';
+          position: absolute;
+          left: 0;
+          color: #0ea5e9;
+          font-weight: 700;
+          font-size: 16px;
+        }
+
+        .founder-contribution {
+          background: #e0f2fe;
+          border-radius: 12px;
+          padding: 16px 20px;
+          border-left: 4px solid #0ea5e9;
+        }
+
+        .founder-contribution h5 {
+          font-family: 'Poppins', sans-serif;
+          font-size: 13px;
+          font-weight: 700;
+          color: #0369a1;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          margin-bottom: 6px;
+        }
+
+        .founder-contribution p {
+          font-size: 14px;
+          color: #0f172a;
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.7;
+          margin: 0;
+        }
+
+        /* ─── SYNERGY SECTION ─── */
+        .synergy-section {
+          background: #ffffff;
+        }
+
+        .synergy-grid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 20px;
+          margin-top: 40px;
+        }
+
+        .synergy-item {
+          background: #fafcff;
+          border: 1px solid #f1f5f9;
+          border-radius: 16px;
+          padding: 28px 20px;
+          text-align: center;
+          transition: all 0.3s;
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .synergy-item:hover {
+          border-color: #38bdf8;
+          transform: translateY(-4px);
+          box-shadow: 0 8px 30px rgba(56, 189, 248, 0.08);
+        }
+
+        .synergy-item .synergy-icon {
+          font-size: 28px;
+          margin-bottom: 8px;
+          display: block;
+        }
+
+        .synergy-item h5 {
+          font-family: 'Times New Roman', Times, serif;
+          font-size: 20px;
+          font-weight: 700;
+          color: #0f172a;
+          margin-bottom: 4px;
+        }
+
+        .synergy-item p {
+          font-size: 14px;
+          color: #64748b;
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.5;
+          margin: 0;
+        }
+
+        .synergy-item .miles-blue {
+          color: #0ea5e9;
+          font-weight: 600;
+        }
+
+        .synergy-conclusion {
+          text-align: center;
+          margin-top: 44px;
+          padding: 30px;
+          background: #fafcff;
+          border-radius: 20px;
+          border: 1px solid #f1f5f9;
+        }
+
+        .synergy-conclusion p {
+          font-size: 18px;
+          color: #0f172a;
+          font-family: 'Poppins', sans-serif;
+          line-height: 1.8;
+          max-width: 800px;
+          margin: 0 auto;
+          font-weight: 500;
+        }
+
+        .synergy-conclusion .miles-blue {
+          color: #0ea5e9;
+          font-weight: 700;
+        }
+
+        .synergy-conclusion .tagline {
+          margin-top: 12px;
+          font-size: 20px;
+          font-weight: 800;
+          color: #0ea5e9;
+          font-family: 'Times New Roman', Times, serif;
         }
 
         /* ─── USP SECTION ─── */
@@ -442,7 +715,7 @@ export default function About() {
           margin-bottom: 12px;
         }
 
-        .cta-section h2 span {
+        .cta-section h2 .miles-blue {
           color: #e0f2fe;
         }
 
@@ -485,6 +758,10 @@ export default function About() {
           height: 22px;
         }
 
+        .miles-blue {
+          color: #0ea5e9;
+        }
+
         /* ─── RESPONSIVE ─── */
         @media (max-width: 1024px) {
           .about-hero-grid {
@@ -510,6 +787,40 @@ export default function About() {
 
           .about-hero-stats {
             justify-content: center;
+          }
+
+          .founder-row {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            text-align: center;
+          }
+
+          .founder-row.reverse {
+            direction: ltr;
+          }
+
+          .founder-row.reverse .founder-info {
+            direction: ltr;
+          }
+
+          .founder-image {
+            max-width: 300px;
+          }
+
+          .founder-info {
+            align-items: center;
+          }
+
+          .founder-capabilities ul {
+            text-align: left;
+          }
+
+          .founder-contribution {
+            text-align: left;
+          }
+
+          .synergy-grid {
+            grid-template-columns: repeat(2, 1fr);
           }
         }
 
@@ -581,6 +892,35 @@ export default function About() {
           .about-hero-image {
             max-width: 320px;
           }
+
+          .founder-image {
+            max-width: 250px;
+          }
+
+          .founder-info .founder-name {
+            font-size: 28px;
+          }
+
+          .synergy-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+          }
+
+          .synergy-item {
+            padding: 20px 15px;
+          }
+
+          .synergy-item h5 {
+            font-size: 17px;
+          }
+
+          .founder-row {
+            margin-bottom: 40px;
+          }
+
+          .founders-middle-box p {
+            font-size: 16px;
+          }
         }
 
         @media (max-width: 480px) {
@@ -644,6 +984,59 @@ export default function About() {
           .image-break-section {
             padding: 30px 0;
           }
+
+          .founder-info .founder-name {
+            font-size: 24px;
+          }
+
+          .founder-info .founder-role {
+            font-size: 14px;
+          }
+
+          .founder-image {
+            max-width: 200px;
+          }
+
+          .synergy-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+          }
+
+          .synergy-item {
+            padding: 16px 12px;
+          }
+
+          .synergy-item .synergy-icon {
+            font-size: 22px;
+          }
+
+          .synergy-item h5 {
+            font-size: 15px;
+          }
+
+          .synergy-item p {
+            font-size: 12px;
+          }
+
+          .synergy-conclusion {
+            padding: 20px 15px;
+          }
+
+          .synergy-conclusion p {
+            font-size: 15px;
+          }
+
+          .synergy-conclusion .tagline {
+            font-size: 17px;
+          }
+
+          .founder-row {
+            margin-bottom: 30px;
+          }
+
+          .founders-middle-box p {
+            font-size: 15px;
+          }
         }
       `}</style>
 
@@ -662,10 +1055,9 @@ export default function About() {
                   Empowering Employability
                 </div>
                 <h1>
-                  Welcome to <span>MILES</span>
+                  Welcome to <span className="miles-blue">MILES</span>
                 </h1>
-                <p>
-                  MILES (Mandke Institute for Learning Employable Skills) is a hub for employability-focused learning - a platform that is a direct pipeline between education and industry. We curate and deliver short-term, high-impact courses designed by top industry trainers and experts, helping learners gain skills that lead directly to ready job opportunities.
+                <p> (<span className="miles-blue">MILES</span>) is a hub for employability-focused learning - a platform that is a direct pipeline between education and industry. We curate and deliver short-term, high-impact courses designed by top industry trainers and experts, helping learners gain skills that lead directly to ready job opportunities.
                 </p>
                 <div className="about-hero-stats">
                   <div className="stat-item">
@@ -699,10 +1091,10 @@ export default function About() {
           <div className="container">
             <div className="section-label">Our Core Proposition</div>
             <h2 className="section-title">
-              Our <span>Core Proposition</span>
+              Our <span className="miles-blue">Core Proposition</span>
             </h2>
             <p className="section-subtitle">
-              MILES is not just another training institute – it is an ecosystem for employability. We connect:
+              <span className="miles-blue">MILES</span> is not just another training institute – it is an ecosystem for employability. We connect:
             </p>
 
             <div className="proposition-grid">
@@ -745,8 +1137,146 @@ export default function About() {
 
             <div className="proposition-connector">
               <p>
-                Together, we create a <span>collaborative model</span> where education meets employment directly.
+                Together, we create a <span className="miles-blue">collaborative model</span> where education meets employment directly.
               </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── FOUNDERS MIDDLE SECTION ─── */}
+        <section className="founders-middle-section section-padding">
+          <div className="container">
+            <div className="founders-middle-box">
+              <div className="section-label">The Visionaries</div>
+              <h2 className="section-title">
+                Founders Behind <span className="miles-blue">MILES</span>
+              </h2>
+              <p>
+               Mandke Institute for Learning Employable Skills <span className="miles-blue">(MILES)</span>is an initiative founded by <strong>Mrs. Radhika Godbole</strong> and <strong>Mr. Indraneil Mandke</strong>, with a shared vision to create a direct pipeline of talent between education and industry by empowering youth with industry-relevant skills, practical exposure, and career confidence.
+              </p>
+              <p>
+                The founders bring together a unique combination of academic understanding, industry experience, entrepreneurship, technology adoption, and a deep commitment to youth development — enabling <span className="miles-blue">MILES</span> to create a dependable, future-ready workforce.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── FOUNDERS PROFILES SECTION ─── */}
+        <section className="founders-profiles-section section-padding">
+          <div className="container">
+            {/* Founder 1 - Radhika Godbole (Image Left, Info Right) */}
+            <div className="founder-row">
+              <div className="founder-image-wrapper">
+                <img 
+                  src={radhikaImage} 
+                  alt="Mrs. Radhika Godbole - Educator & Skill Development Advocate" 
+                  className="founder-image"
+                />
+              </div>
+              <div className="founder-info">
+                <div className="founder-name">Mrs. Radhika Godbole</div>
+                <div className="founder-role">Educator &amp; Skill Development Advocate</div>
+                <p className="founder-desc">
+                  Deep insight into the challenges faced by students transitioning from academics to careers, with the ability to identify gaps between traditional education and workplace expectations.
+                </p>
+
+                <div className="founder-capabilities">
+                  <h5>Key Capabilities</h5>
+                  <ul className="capability-list">
+                    <li><strong>Understanding of Education &amp; Student Needs</strong> — Deep insight into the challenges faced by students transitioning from academics to careers. Ability to identify gaps between traditional education and workplace expectations.</li>
+                    <li><strong>Academic Institution Building &amp; Mentorship</strong> — Experience in developing educational initiatives focused on values, discipline, and holistic development. Strong understanding of parent and student expectations.</li>
+                  </ul>
+                </div>
+
+                <div className="founder-contribution">
+                  <h5>Contribution to MILES Vision</h5>
+                  <p>
+                    Designing learner-centric programs in collaboration with expert trainers that help students move beyond degrees towards employability. Creating structured learning journeys aligned with real career outcomes. Building trust among students, parents, and institutions. Creating a platform for expert trainers to share their knowledge. Establishing <span className="miles-blue">MILES</span> as a credible bridge between education and industry.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Founder 2 - Indraneil Mandke (Image Right, Info Left) */}
+            <div className="founder-row reverse">
+              <div className="founder-image-wrapper">
+                <img 
+                  src={indraneilImage} 
+                  alt="Mr. Indraneil Mandke - Industry & Innovation-Focused Entrepreneur" 
+                  className="founder-image"
+                />
+              </div>
+              <div className="founder-info">
+                <div className="founder-name">Mr. Indraneil Mandke</div>
+                <div className="founder-role">Industry &amp; Innovation-Focused Entrepreneur</div>
+                <p className="founder-desc">
+                  Strong understanding of business operations, market trends, and employer expectations, with the ability to identify skills required by growing industries.
+                </p>
+
+                <div className="founder-capabilities">
+                  <h5>Key Capabilities</h5>
+                  <ul className="capability-list">
+                    <li><strong>Industry Experience &amp; Business Understanding</strong> — Strong understanding of business operations, market trends, and employer expectations. Ability to identify skills required by growing industries.</li>
+                    <li><strong>Entrepreneurship &amp; Institution Development</strong> — Experience in building systems, partnerships, and scalable initiatives. Ability to create sustainable models for growth.</li>
+                  </ul>
+                </div>
+
+                <div className="founder-contribution">
+                  <h5>Contribution to MILES Vision</h5>
+                  <p>
+                    Ensuring that <span className="miles-blue">MILES</span> programs remain connected to real workplace requirements. Developing industry-aligned curriculum that improves employability. Expanding <span className="miles-blue">MILES</span> through collaborations with educational institutions, companies, and skill partners. Creating a scalable ecosystem for youth career development.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── SYNERGY SECTION ─── */}
+        <section className="synergy-section section-padding">
+          <div className="container">
+            <div className="section-label">Synergy</div>
+            <h2 className="section-title">
+              Creating a Direct Pipeline Between <span className="miles-blue">Education &amp; Employment</span>
+            </h2>
+            <p className="section-subtitle">
+              The strength of <span className="miles-blue">MILES</span> lies in the complementary capabilities of its founders:
+            </p>
+
+            <div className="synergy-grid">
+              <div className="synergy-item">
+                <span className="synergy-icon">🎓</span>
+                <h5>Education</h5>
+                <p>+</p>
+                <p className="miles-blue">Industry</p>
+              </div>
+              <div className="synergy-item">
+                <span className="synergy-icon">💎</span>
+                <h5>Values</h5>
+                <p>+</p>
+                <p className="miles-blue">Skills</p>
+              </div>
+              <div className="synergy-item">
+                <span className="synergy-icon">📚</span>
+                <h5>Knowledge</h5>
+                <p>+</p>
+                <p className="miles-blue">Application</p>
+              </div>
+              <div className="synergy-item">
+                <span className="synergy-icon">🚀</span>
+                <h5>Learning</h5>
+                <p>+</p>
+                <p className="miles-blue">Employability</p>
+              </div>
+            </div>
+
+            <div className="synergy-conclusion">
+              <p>
+                Together, <span className="miles-blue">Mrs. Radhika Godbole</span> and <span className="miles-blue">Mr. Indraneil Mandke</span> aim to create a platform where every student can discover their potential, develop relevant skills, and confidently step into the world of work.
+              </p>
+              <div className="tagline">
+                <span className="miles-blue">MILES</span> — Building a dependable workforce for tomorrow
+              </div>
             </div>
           </div>
         </section>
@@ -769,7 +1299,7 @@ export default function About() {
         </section>
 
         {/* ─── USP SECTION ─── */}
-        <section className="usp-section section-padding">
+        {/* <section className="usp-section section-padding">
           <div className="container">
             <div className="section-label">Unique Selling Points</div>
             <h2 className="section-title">
@@ -781,7 +1311,8 @@ export default function About() {
                 <div className="usp-number">01</div>
                 <h4>Ready Jobs, Not Just Courses</h4>
                 <p>
-                  Every MILES program is aligned with actual market demand - designed to prepare learners for specific, available job roles. Our strong network of hiring partners ensures that training leads to real employment opportunities.
+                  1.Every <span className="miles-blue">MILES</span> program is aligned with actual market demand - designed to prepare learners for specific, available job roles.
+Our strong network of hiring partners ensures that training leads to real employment opportunities.
                 </p>
               </div>
 
@@ -789,26 +1320,25 @@ export default function About() {
                 <div className="usp-number">02</div>
                 <h4>Industry-Education Collaboration</h4>
                 <p>
-                  Programs are co-created with industry professionals and employers, ensuring relevance and currency. This means learners don't just learn theory - they gain the exact skills employers are looking for.
-                </p>
+2.Programs are co-created with industry professionals and employers, ensuring relevance and currency.
+This means learners don't just learn theory - they gain the exact skills employers are looking for.                </p>
               </div>
 
               <div className="usp-card">
                 <div className="usp-number">03</div>
                 <h4>Expert Trainers & Mentors</h4>
                 <p>
-                  MILES brings together top trainers and practitioners across domains - from corporate professionals to entrepreneurs and technical specialists - offering deep, practical learning experiences.
-                </p>
+3.<span className="miles-blue">MILES</span> brings together top trainers and practitioners across domains - from corporate professionals to entrepreneurs and technical specialists - offering deep, practical learning experiences.                </p>
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* ─── CTA SECTION ─── */}
         <section className="cta-section">
           <div className="container">
-            <h2>Come join <span>MILES</span>' Course to Career path</h2>
-            <p>and be MILES ahead of the Competition</p>
+            <h2>Come join <span className="miles-blue">MILES</span>' Course to Career path</h2>
+            <p>and be <span className="miles-blue">MILES</span> ahead of the Competition</p>
             <Link to="/courses" className="cta-btn">
               Explore Our Courses
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">

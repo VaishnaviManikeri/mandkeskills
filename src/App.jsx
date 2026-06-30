@@ -15,8 +15,7 @@ import PersonalityPage from "./pages/PersonalityPage";
 import About from "./pages/About";
 // import Services from "./pages/Services";
 import Contact from "./pages/ContactPage";
-import Registeration from "./pages/Registeration";
-
+import Webinar from "./pages/Webinar";
 function App() {
   return (
     <div className="bg-black text-white min-h-screen flex flex-col">
@@ -40,7 +39,7 @@ function App() {
           {/* <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} /> */}
           <Route path="/contact" element={<Contact />} />
-          <Route path="/registeration" element={<Registeration />} />
+          <Route path="/webinar" element={<Webinar />} />
           <Route path="/courses/personality" element={<PersonalityPage />} />
         </Routes>
       </div> 

@@ -1121,7 +1121,7 @@ export default function Navbar() {
           {/* Logo - Left */}
           <button className="logo-wrap" onClick={handleLogoClick} aria-label="Go to Home">
             <div className="logo-img-container">
-              <img src="/assets/logo/logo.png" alt="University Logo" />
+              <img src="/assets/images/logo1.png" alt="University Logo" />
             </div>
           </button>
 
